@@ -1,0 +1,274 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  /*background-color: #353935; */
+  background: linear-gradient(to right, #000000, #414141);
+}
+/*navbar*/
+nav{
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 0em 1em;
+  /*background-color: black;*/
+  width: 100%;
+  height: 5em;
+  border-bottom: 2px solid transparent;
+  background:
+        linear-gradient(to right, #000000, #353935) padding-box,
+        linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
+  
+}
+.logoName{
+  padding: 18px 18px;
+  width: 30%;
+  height: 100%;
+  color: white;
+  font-size: 2.5em;
+  /*border: 1px solid blue; */
+}
+navbar{
+  height: 100%;
+  width: 70%;
+  text-align: right;
+  /*border: 1px solid red;*/
+}
+.navOption{
+  padding: 34px 1.3em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  /*border: 1px solid green;*/
+}
+.navOption#current{
+  color: yellow;
+}
+.navOption:hover{
+  background-color: #CCCCCC;
+}
+#loginBtn{
+  margin: 19px;
+  padding: 1em 2em;
+  color: black;
+  font-weight: bold;
+  background-color: yellow;
+  border: none;
+  border-radius: 0.4em;
+  transition-duration: 1.5s;
+}
+#loginBtn:hover{
+  background-color: orange;
+}
+/*navbar end*/
+
+/*main*/
+main{
+  display: block;
+  margin: 0 10%;
+  padding: 2em 2em 0.5em 2em;
+  min-height: 1050px;
+  width: 80%;
+  border: 1px solid red;
+  background-color: transparent;
+}
+.mainHome{
+  background-color: transparent;
+}
+h1{
+  color: white;
+  /*border: 1px solid cadetblue; */
+}
+.getStartBtn{
+  margin: 1em 0;
+  padding: 1.5em;
+  width: 14em;
+  font-weight: bold;
+  background-color: yellow;
+  border: none;
+  border-radius: 30px;
+  box-shadow: -2px 2px 8px #000;
+  transition-duration: 2s;
+}
+.getStartBtn:hover{
+  background-color: orange;
+  width: 16em;
+}
+
+#goToAnimeText{
+  display: none;
+}
+.getStartBtn:hover #getStartText{
+  display: none;
+}
+.getStartBtn:hover #goToAnimeText{
+  display: inline;
+}
+/*SEARCH BAR*/
+.searchBarContainer{
+  border: 1px solid forestgreen;
+}
+.searchBar{
+  display: inline-block;
+  margin: 1em 0;
+  padding: 0 10px;
+  border: 2px solid transparent;
+  background:
+  linear-gradient(to right, #A6A6A6, #A6A6A6) padding-box,
+  linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
+  border-radius: 2em;
+  width: 40%;
+  height: 40px;
+  background-color: #FFFFFF3D;
+  box-shadow: 2px 2px 5px #7D7F8E;
+}
+.searchBar:focus{
+  background: white padding-box;
+}
+.searchBtn{
+  margin: 0 5px;
+  width: 65px;
+  height: 35px;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 2px 2px 5px #7D7F8E;
+  transition-duration: 0.5s;
+  background-image: url('img/iconSearch.png');
+  background-size: 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+        
+}
+.searchBtn:hover{
+  background-color: yellow;
+  font-weight: bold;
+  color: grey;
+}
+/*SEARCHBAR END*/
+
+/*MOVIE INFORMATION*/
+.generalContainer{
+  display: block;
+  padding: 1em 0;
+  height: 90%;
+  /*left*/border: 2px solid white;/*right*/
+}
+.container1{
+  display: flex;
+  width: 100%;
+  height: 450px;
+  /*left*/border: 1px solid black;/*right*/
+}
+.posterContainer{
+  text-align: center;
+  width: 50%;
+  height: 400px;
+  /*left*/border: 1px solid red;/*right*/
+}
+.poster{
+  height: 400px;
+}
+.details{
+  width: 50%;
+  color: white;
+  /*left*/border: 1px solid blue;/*right*/
+}
+.title{
+  height: 70px;
+  text-align: center;
+  color: white;
+  /*left*/border: 1px solid white;/*right*/
+}
+.animeInfo{
+  padding: 1em 1em;
+}
+
+.container2{
+  padding: 1em;
+  width: 100%;
+  color: white;
+  /**/border: 1px solid green;
+}
+/*MOVIE INFORMATION END*/
+
+
+/*main end*/
+
+/*footer */
+footer{
+  margin: 1em 0 0 0;
+  padding: 1em;
+  width: 100%;
+  height: 125px;
+  background-color: #8A8A8A;
+}
+
+@media(max-width: 768px){
+/*NAV*/
+nav{
+  display: block;
+  height: 5.6em;
+}
+.logoName{
+  padding: 0;
+  height: 60%;
+  width: 100%;
+  text-align: center;
+}
+navbar{
+  padding: 0 3px;
+  display: block;
+  height: 40%;
+  width: 100%;
+  text-align: center;
+}
+.navOption{
+  margin: 0;
+  padding: 11px 7px;
+  height: 100%;
+}
+#loginBtn{
+  margin: 0;
+  padding: 10px;
+}
+/*NAV END*/
+/*MAIN*/
+main {
+  width: 94%;
+  margin: 0 3%;
+  padding: 0;
+}
+h1{
+  text-align: center;
+}
+.welcomeText{
+  text-align: left;
+}
+/*SEARCH BAR MOBILE*/
+.searchBarContainer{
+  text-align: center;
+}
+.searchBar{
+  width: 60%;
+}
+/*SEARCH BAR MOBILE END*/
+.generalContainer{
+  margin: 0;
+  padding: 0;
+}
+.container1{
+  display: block;
+}
+.posterContainer, .poster, .details{
+  width: 100%;
+}
+.poster{
+  height: 100%;
+  padding: 2em 2em 0 2em;
+}
+.container1{
+  height: 750px;
+}
+}

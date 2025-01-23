@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>ANIME/MOVIE WEB</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logoName">YANGYANG</div>
+    <navbar>
+      <a href="index.html" class="navOption">Home</a>
+      <a href="Anime.html" class="navOption" >Anime</a>
+      <a href="" class="navOption" id="current">Movies</a>
+      <a href="About.html" class="navOption">About</a>
+      <button class="" type="button" id="loginBtn" onclick='clickLogin()'>Login</button>
+    </navbar>
+  </nav>
+  <main>
+   <h1>Movies</h1>
+   
+   <form action="" method="get" accept-charset="utf-8">
+     <input type="search" name="search" class="searchBar" id="movieSearchBar" value="" placeholder="Enter Movie Title"/>
+     <input type="submit" name="" class="searchBtn" id="submitMovieSearch" value="" />
+   </form>
+   <div class="generalContainer">
+    <div class="container1">
+      <div class="posterContainer">
+        <img src="img/poster2.jpg" alt="" class="poster">
+      </div>
+      <div class="details">
+        <h1 class="title" id='movieTitle'>Avengers: Endgame</h1>
+          <p class="animeInfo">Released: <span id="movieAired">2019-24-04</span></p>
+          <p class="animeInfo" >Rated: <span id="movieRated">PG-13</span></p>
+          <p class="animeInfo" id="movieGenre">Genre: 
+            <span>Action</span>
+            <span>Adventure</span>
+            <span>Drama</span>
+          </p>
+          <p class="animeInfo" >Duration: <span id="movieDuration">181 min</span></p>
+          <p class="animeInfo">Director: <span id="movieDirector">"Anthony Russo, Joe Russo"</span></p>
+          <p class="animeInfo">Rating: <span id="movieRating">"8.4*"</span></p>
+      </div>
+    </div>
+
+    <div class="container2">
+      <h3>Sypnosis</h3>
+      <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+    </div>
+   </div>
+ </main>
+ 
+ <footer>
+    <h1>FOOTER</h1>
+  </footer>
+</body>
+<script src="API.js" ></script>
+</html>
