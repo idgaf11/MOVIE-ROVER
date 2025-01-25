@@ -70,8 +70,9 @@ navbar{
 main{
   display: block;
   margin: 10px 10%;
-  padding: 2em 2em 0.5em 2em;
+  padding: 2em 1em;
   min-height: 700px;
+  max-width: 770px;
   width: 80%;
   border-radius: 45px;
   box-shadow: -10px 0 30px #414141, 10px 0 30px black;
@@ -146,7 +147,7 @@ h1{
 }
 .searchBtn{
   margin: 15px 5px;
-  width: 65px;
+  width: 35px;
   height: 35px;
   border: none;
   border-radius: 2em;
@@ -170,7 +171,7 @@ h1{
 .container2{
   /*grid-template-columns: auto auto auto;*/
   /*grid-gap: 10px;*/
-  padding: 0;
+  padding: 0 9px;
   width: 100%;
   height: auto;
   border: 1px solid violet;
@@ -179,7 +180,7 @@ h1{
   display: inline-block;
   position: relative;
   margin: 4px 8px;
-  width: 221px; /* ADJUST THIS*/
+  max-width: 221px; /* ADJUST THIS*/
   height: 415px;
   border-radius: 10px;
   overflow: hidden;
@@ -212,22 +213,26 @@ h1{
   overflow: hidden;
   text-overflow: ellipsis; */
   height: 70%;
-  width: 70%;
-  overflow: auto;
+  width: 80%;
+  overflow: hidden;
   font-weight: Bold;
   font-size: 1.5em;
   border: 1px solid green;
 }
 #ratingsContainer{
+  width: 20%;
   position: absolute;
-  padding: 5px;
+  padding: 5px 3px;
   right: 0;
   text-align: center;
   border: 1px solid black;
 }
 #ratings{
-  width: 40px;
-  padding: 10px;
+  padding: 11px 9px;
+  width: 35px;
+  height: 35px;
+  font-size: 13px;
+  text-align: center;
   color: lawngreen;
   font-weight: 900;
   border-radius: 10px;
@@ -235,6 +240,7 @@ h1{
 }
 #genreContainer{
   height: 30%;
+  width: auto;
   font-size: 1em;
   padding: 0 10px;
   border: 1px solid blue;
@@ -270,6 +276,12 @@ h1{
 }
 .movieContainer:hover .overview{
   transform: translateY(0);
+}
+.ruler{
+  
+  margin: auto;
+  border: 2px solid white;
+  width: 775px;
 }
 
 /*MOVIE INFORMATION END*/
