@@ -20,39 +20,36 @@
     </navbar>
   </nav>
   <main>
-    <div class="searchBarContainer">
-       <h1>Movies</h1>
+    <div class="container1">
+       <h1 class="movieHeading">Movies</h1>
        
-       <form action="" method="get" accept-charset="utf-8">
+       <form action="" method="get" accept-charset="utf-8" class="searchBarContainer">
          <input type="search" name="search" class="searchBar" id="movieSearchBar" value="" placeholder="Search by Movie Title"/>
          <input type="submit" name="" class="searchBtn" id="submitMovieSearch" value="" />
        </form>
     </div>
-   <div class="generalContainer">
-    <div class="container1">
+  <div class="container2">
+    <div class="movieContainer">
       <div class="posterContainer">
         <img src="img/poster2.jpg" alt="NO IMAGE FOUND, TRY REFRESHING THE PAGE." class="poster" id="moviePoster">
       </div>
-      <div class="details">
-        <h1 class="title" id='movieTitle'>Avengers: Endgame</h1>
-          <p class="animeInfo">Released: <span id="movieAired">2019-24-04</span></p>
-          <p class="animeInfo">Rated: <span id="movieRated">PG-13</span></p>
-          <p class="animeInfo" id="movieGenre">Genre: 
-            <span>Action</span>
-            <span>Adventure</span>
-            <span>Drama</span>
-          </p>
-          <p class="animeInfo" >Duration: <span id="movieDuration">181 min</span></p>
-          <p class="animeInfo">Director: <span id="movieDirector">"Anthony Russo, Joe Russo"</span></p>
-          <p class="animeInfo">Rating: <span id="movieRating">"8.4*"</span></p>
-      </div>
+        <div class="movieDetailsContainer">
+          <span class="movieDetails" id="movieTitle">AVENGERS: ENDGAME</span>
+          <span class="movieDetails" id=ratingsContainer>
+            <p id="ratings">8.1</p>
+            </span>
+          <span class="movieDetails" id="genreContainer">
+            <p id="genre">Action/Sci-fi</p>
+            </span>
+          <span class="movieDetails" id="duration">1h 3m</span>
+       </div>
+       <div class="overview">
+         <p>OVERVIEW</p>
+         <span>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.</span>
+       </div>
     </div>
 
-    <div class="container2">
-      <h3>Sypnosis</h3>
-      <p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
-    </div>
-   </div>
+  </div>
  </main>
  
  <footer>
