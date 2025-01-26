@@ -22,17 +22,29 @@ nav{
         linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
   
 }
+.icon{
+  width: 15%;
+  background-image: url("img/Spectro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65px;
+}
+
+.logoNameContainer{
+  display: flex;
+  width: 40%;
+}
+
 .logoName{
-  padding: 18px 18px;
-  width: 30%;
+  padding: 18px 0;
+  width: 85%;
   height: 100%;
   color: white;
   font-size: 2.5em;
-  /*border: 1px solid blue; */
 }
 navbar{
   height: 100%;
-  width: 70%;
+  width: 60%;
   text-align: right;
   /*border: 1px solid red;*/
 }
@@ -44,7 +56,8 @@ navbar{
   /*border: 1px solid green;*/
 }
 .navOption#current{
-  color: yellow;
+  color: #FFBF00;
+  font-weight: 900;
 }
 .navOption:hover{
   background-color: #CCCCCC;
@@ -54,14 +67,14 @@ navbar{
   padding: 1em 2em;
   color: black;
   font-weight: bold;
-  background-color: yellow;
+  background: linear-gradient(to right, #fa709a, #fee140);
   border: none;
   border-radius: 0.4em;
   transition-duration: 0.5s;
 }
 #loginBtn:hover{
   cursor: pointer;
-  background-color: grey;
+  background-color: white;
   color: white;
 }
 /*navbar end*/
@@ -74,20 +87,19 @@ main{
   min-height: 700px;
   max-width: 770px;
   width: 80%;
-  border-radius: 45px;
+  border-radius: 30px;
   box-shadow: -10px 0 30px #414141, 10px 0 30px black;
   background: linear-gradient(to right, #000000, #414141);
 }
 h1{
   color: white;
-  border: 1px solid cadetblue;
 }
 .getStartBtn{
   margin: 1em 0;
   padding: 1.5em;
   width: 14em;
   font-weight: bold;
-  background-color: yellow;
+  background-color: #FFD700;
   border: none;
   border-radius: 30px;
   box-shadow: -2px 2px 15px grey;
@@ -135,8 +147,8 @@ h1{
   border: 2px solid transparent;
   color: white;
   background:
-  linear-gradient(to right, #000000, #000000) padding-box,
-  linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
+    linear-gradient(to right, #000000, #000000) padding-box,
+    linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
   border-radius: 2em;
   width: 40%;
   height: 40px;
@@ -179,12 +191,13 @@ h1{
 .movieContainer{
   display: inline-block;
   position: relative;
-  margin: 4px 8px;
+  margin: 10px 8px;
   max-width: 221px; /* ADJUST THIS*/
   height: 415px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid white;
+  box-shadow: 0 0 5px white;
+  border: 2px solid #E2DFD2;
 }
 .posterContainer{
   height: 80%;
@@ -304,11 +317,20 @@ nav{
   display: block;
   height: 5.6em;
 }
-.logoName{
+.logoNameContainer{
+  margin: auto;
   padding: 0;
   height: 60%;
-  width: 100%;
-  text-align: center;
+  width: 70%;
+}
+.logoName{
+  padding: 9px 0;
+  width: 80%;
+  font-size: 2em;
+}
+.icon{
+  width: 20%;
+  background-size: 50px;
 }
 navbar{
   padding: 0 3px;
@@ -338,31 +360,31 @@ main {
 .mainHome{
   text-align: center;
 }
-h1{
+.movieHeading{
+  width: 100%;
   text-align: center;
 }
 /*SEARCH BAR MOBILE*/
 .searchBarContainer{
   margin: auto;
-  width: 90%;
+  width: 100%;
   text-align: center;
 }
 .searchBar{
   width: 60%;
 }
+.searchBtn{
+  display:none;
+}
 /*SEARCH BAR MOBILE END*/
 /* MAIN CONTEN ON MOBILE*/
-.generalContainer{
-  margin: 0;
-  padding: 0;
-}
 .container1{
   display: block;
-  min-height: 750px;
 }
-.poster{
-  height: 100%;
-  padding: 2em 2em 0 2em;
+.movieContainer{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
 }
 /*MAIN CONTENT ON MOBILE END*/
 }
