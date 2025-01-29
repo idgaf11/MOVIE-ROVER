@@ -13,6 +13,7 @@ nav{
   display: flex;
   position: sticky;
   top: 0;
+  z-index: 1;
   padding: 0em 1em;
   width: 100%;
   height: 5em;
@@ -36,11 +37,11 @@ nav{
 }
 
 .logoName{
-  padding: 18px 0;
+  padding: 20px 0;
   width: 85%;
   height: 100%;
   color: white;
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 navbar{
   height: 100%;
@@ -74,19 +75,18 @@ navbar{
 }
 #loginBtn:hover{
   cursor: pointer;
-  background-color: white;
+  background: grey;
   color: white;
 }
 /*navbar end*/
 
 /*main*/
 main{
-  display: block;
-  margin: 10px 10%;
+  margin: 10px auto;
   padding: 2em 1em;
   min-height: 700px;
-  max-width: 770px;
-  width: 80%;
+  /*max-width: 770px;*/
+  width: 90%;
   border-radius: 30px;
   box-shadow: -10px 0 30px #414141, 10px 0 30px black;
   background: linear-gradient(to right, #000000, #414141);
@@ -108,8 +108,8 @@ h1{
 .getStartBtn:hover{
   width: 16em;
   color: white;
-  background-color: grey;
-  box-shadow: 0 0 50px #414141 ;
+  background-color: #fa709a;
+  box-shadow: 0 0 50px #414141;
 }
 
 #goToAnimeText{
@@ -123,6 +123,7 @@ h1{
 }
 /*SEARCH BAR*/
 .container1{
+  height: 85px;
   display: flex;
   border: 1px solid chocolate;
 }
@@ -130,10 +131,12 @@ h1{
   padding: 20px 0;
   width: 50%;
   display: inline-block;
+  border: 1px solid red;
 }
 .searchBarContainer{
   display: flex;
-  padding: 5px 5px;
+  position: relative;
+  padding: 0 5px;
   justify-content: right;
   width: 50%;
   align-content: right;
@@ -142,31 +145,35 @@ h1{
 
 .searchBar{
   display: inline-block;
-  margin: 1em 0;
+  margin: auto 0;
   padding: 0 10px;
-  border: 2px solid transparent;
+  width: 75%;
+  height: 45px;
+  font-size: 1.3em;
   color: white;
+  border: 1px solid transparent;
   background:
     linear-gradient(to right, #000000, #000000) padding-box,
     linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
-  border-radius: 2em;
-  width: 40%;
-  height: 40px;
+  border-radius: 8px;
   background-color: #FFFFFF3D;
 }
 .searchBar:focus{
   background: black;
 }
 .searchBtn{
-  margin: 15px 5px;
-  width: 35px;
-  height: 35px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
   border: none;
   border-radius: 2em;
-  box-shadow: 2px 2px 5px #7D7F8E;
   transition-duration: 0.5s;
   background-image: url('img/iconSearch.png');
-  background-size: 19px;
+  background-size: 16px;
   background-repeat: no-repeat;
   background-position: center;
         
@@ -181,107 +188,129 @@ h1{
 /*MOVIE INFORMATION*/
 
 .container2{
-  /*grid-template-columns: auto auto auto;*/
-  /*grid-gap: 10px;*/
-  padding: 0 9px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 10px;
+  padding-bottom: 9px;
   width: 100%;
   height: auto;
-  border: 1px solid violet;
+  /*border: 1px solid violet;*/
 }
 .movieContainer{
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   position: relative;
-  margin: 10px 8px;
-  max-width: 221px; /* ADJUST THIS*/
-  height: 415px;
+  margin: 10px 9px;
+  flex-basis: 189px; /* ADJUST-THIS IS WIDTH*/
+  height: 347px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 5px white;
   border: 2px solid #E2DFD2;
 }
 .posterContainer{
-  height: 80%;
+  position: relative;
+  height: 275px;
   width: 100%;
-  border: 1px solid deeppink;
+  /*border: 1px solid deeppink;*/
 }
 .poster{
-  height: 330px;
-  text-align: center;
+  height: 100%;
   color: white;
 }
 .movieDetailsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   position: relative;
   height: 20%;
+  width: 100%;
   background: #E2DFD2;
-  border: 1px solid lightcoral;
+  transition-duration: 1s;
+  /*border: 1px solid lightcoral;*/
 }
 .movieDetails{
-  display: inline-block; 
   padding: 3px;
   margin: 0;
+  font-size: 0.7em;
   color: black;
 }
 #movieTitle{
   /*white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; */
+  padding: 0 5px;
   height: 70%;
   width: 80%;
   overflow: hidden;
   font-weight: Bold;
-  font-size: 1.5em;
+  font-size: 1.4em;
   border: 1px solid green;
 }
 #ratingsContainer{
+  display: flex;
+  align-items: center;
   width: 20%;
-  position: absolute;
-  padding: 5px 3px;
-  right: 0;
-  text-align: center;
+  height: 70%;
   border: 1px solid black;
 }
 #ratings{
-  padding: 11px 9px;
-  width: 35px;
-  height: 35px;
-  font-size: 13px;
-  text-align: center;
+  display: flex;
+  justify-content: center; /*align text: center*/
+  align-items: center;
+  margin: auto;
+  width: 99%;
+  height: 70%;
+  font-size: 1em;
   color: lawngreen;
   font-weight: 900;
   border-radius: 10px;
   background-color: #353935;
+  
 }
-#genreContainer{
+.genreContainer{
+  display: flex;
+  align-items: center;
   height: 30%;
   width: auto;
-  font-size: 1em;
-  padding: 0 10px;
-  border: 1px solid blue;
+  max-width: 70%;
+  border: 1px solid red;
 }
-#genre{
+.genre{
   padding: 0 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: grey;
 }
 #duration{
+  display: flex;
+  align-items: center;
   position: absolute;
+  height: 30%;
+  width: 30%;
   padding: 5px 7px;
   right: 0;
-  bottom: 1px;
+  bottom: 0;
+  border: 1px solid darkcyan;
 }
 .overview{ 
   position: absolute;
   padding: 10px;
-  width: auto;
+  width: 100%;
   height: auto;
   bottom: 0;
+  font-size: 1em;
   overflow: auto;
-  opacity: 0.9;
-  background-color: white;
+  background-color: #E2DFD2;
   transform: translateY(101%);
   transition-duration: 1s;
-  border: 1px solid moccasin;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .overview p{
   font-weight: bold;
@@ -290,13 +319,6 @@ h1{
 .movieContainer:hover .overview{
   transform: translateY(0);
 }
-.ruler{
-  
-  margin: auto;
-  border: 2px solid white;
-  width: 775px;
-}
-
 /*MOVIE INFORMATION END*/
 
 
@@ -361,17 +383,21 @@ main {
   text-align: center;
 }
 .movieHeading{
+  padding: 10px;
   width: 100%;
   text-align: center;
 }
 /*SEARCH BAR MOBILE*/
+.container1{
+  height: auto;
+}
 .searchBarContainer{
-  margin: auto;
   width: 100%;
   text-align: center;
 }
 .searchBar{
-  width: 60%;
+  margin: 8px auto;
+  width: 70%;
 }
 .searchBtn{
   display:none;
@@ -382,9 +408,20 @@ main {
   display: block;
 }
 .movieContainer{
-  display: block;
-  margin: auto;
-  margin-top: 10px;
+  flex-basis: 139px;
+  height: 247px;
+}
+.posterContainer{
+  height: 195px;
+}
+.poster{
+  height: 200px;
+}
+#movieTitle{
+  font-size: 1em;
+}
+#ratings, .genre, #duration, .overview{
+  font-size: 0.6em;
 }
 /*MAIN CONTENT ON MOBILE END*/
 }

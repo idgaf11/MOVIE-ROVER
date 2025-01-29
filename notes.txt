@@ -1,0 +1,16 @@
+const url = 'https://myanimelist.p.rapidapi.com/anime/52991';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '99fab7a341mshc1aaf0b5f7e0891p127e78jsn23b86503c36c',
+		'x-rapidapi-host': 'myanimelist.p.rapidapi.com'
+	}
+};
+
+async function fetchData() {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	console.log(result.information.status);
+}
+
+//fetchData();//
