@@ -24,17 +24,18 @@
   </nav>
   <main>
     <div class="container1">
-       <h1 class="movieHeading">Movies</h1>
+       <h1 class="movieHeading">POPULAR</h1>
        
-       <form action="" method="get" accept-charset="utf-8" class="searchBarContainer">
-         <input type="submit" name="" class="searchBtn" id="submitMovieSearch" value="" />
-         <input type="search" name="search" class="searchBar" id="movieSearchBar" value="" placeholder="Search by Movie Title"/>
+       <form action="" method="get" accept-charset="utf-8" class="searchBarContainer" id="searchForm">
+         <input type="search" name="search" class="searchBar" id="searchForMovie" value="" placeholder="Search by Movie Title"/>
+         <button type="submit" class="searchBtn" id="submitMovieSearch"></button>
        </form>
     </div>
   <div class="container2" id="movieDisplay">
 
     <div class="movieContainer">
       <div class="posterContainer">
+        <div class="movieType">MOVIE</div>
         <div class="overview">
           <p>OVERVIEW</p>
           <span>After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.</span>
@@ -44,7 +45,7 @@
         <div class="movieDetailsContainer">
           <p class="movieDetails" id="movieTitle">AVENGERS: ENDGAME </p>
           <span class="movieDetails" id=ratingsContainer>
-            <p id="ratings">8.1</p>
+            <p class="ratings">8.1</p>
           </span>
           <span class="genreContainer">
             <p class="genre movieDetails">Action/Sci-fi/Fantasy/Drama</p>
@@ -53,10 +54,12 @@
        </div>
     </div>
 
+    <div style="display:flex; flex-direction: column; align-items: center; height: 700px; width: 100%; font-size: 1em; color: white;">
+      <p>NO RESULT(S)!</p>
+    </div>
+      
   </div>
  </main>
-   
- </div>
  <footer>
     <h1>FOOTER</h1>
   </footer>
