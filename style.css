@@ -35,12 +35,10 @@ nav{
   background-position: center;
   background-size: 65px;
 }
-
 .logoNameContainer{
   display: flex;
   width: 40%;
 }
-
 .logoName{
   padding: 20px 0;
   height: 100%;
@@ -101,6 +99,7 @@ main{
   box-shadow: -10px 0 30px #414141, 10px 0 30px black;
   background: linear-gradient(to right, #000000, #414141);
 }
+/*HOME PAGE*/
 h1{
   color: white;
 }
@@ -130,17 +129,18 @@ h1{
 .getStartBtn:hover #goToAnimeText{
   display: inline;
 }
-/*SEARCH BAR*/
+/*SEARCH BAR - MOVIE PAGE*/ 
 .container1{
   height: 85px;
   display: flex;
-  border: 1px solid chocolate;
+  /*border: 1px solid chocolate;*/
 }
 .movieHeading{
   padding: 20px 0;
   width: 50%;
+  font-size: 1.7em;
   display: inline-block;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .searchBarContainer{
   display: flex;
@@ -148,9 +148,8 @@ h1{
   align-items: center;
   padding: 0 5px;
   width: 50%;
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
 }
-
 .searchBar{
   padding: 0 10px;
   width: 50%;
@@ -179,7 +178,6 @@ h1{
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid #fee140;
-        
 }
 .searchBtn:hover{
   background-color: yellow;
@@ -187,9 +185,11 @@ h1{
   color: grey;
 }
 /*SEARCHBAR END*/
-
+#displayError {
+  display: none;
+  width: 100%;
+}
 /*MOVIE INFORMATION*/
-
 .container2{
   display: flex;
   flex-wrap: wrap;
@@ -200,15 +200,21 @@ h1{
   height: auto;
   /*border: 1px solid violet;*/
 }
+.errorMess{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  color: white;
+}
 .movieContainer{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   position: relative;
-  margin: 10px 9px;
-   /* ADJUST-THIS IS WIDTH*/
-  width: 189px;
+  margin: 10px 9px; 
+  width: 189px; /* ADJUST-THIS IS WIDTH*/
   height: 347px;
   border-radius: 10px;
   overflow: hidden;
@@ -242,7 +248,6 @@ h1{
   border: 1px solid white;
   border-radius: 10px;
 }
-
 .movieDetailsContainer{
   display: flex;
   flex-wrap: wrap;
@@ -251,7 +256,7 @@ h1{
   height: 20%;
   width: 100%;
   background: #E2DFD2;
-  border: 1px solid lightcoral;
+  /*border: 1px solid lightcoral;*/
 }
 .movieDetails{
   padding: 3px;
@@ -259,24 +264,26 @@ h1{
   font-size: 0.7em;
   color: black;
 }
-#movieTitle{
+.movieTitle{
+  display: flex;
+  align-items: center;
   /*white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; */
   padding: 0 5px;
   height: 70%;
   width: 80%;
-  overflow: hidden;
+  overflow-y: auto;
   font-weight: Bold;
-  font-size: 1.1em;
-  border: 1px solid green;
+  font-size: 1.2em;
+  /*border: 1px solid green;*/
 }
-#ratingsContainer{
+.ratingsContainer{
   display: flex;
   align-items: center;
   width: 20%;
   height: 70%;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 .ratings{
   display: flex;
@@ -299,7 +306,7 @@ h1{
   height: 30%;
   width: auto;
   max-width: 70%;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .genre{
   padding: 0 7px;
@@ -310,7 +317,7 @@ h1{
   border-radius: 10px;
   background-color: grey;
 }
-#duration{
+.duration{
   display: flex;
   align-items: center;
   position: absolute;
@@ -319,7 +326,7 @@ h1{
   padding: 5px 7px;
   right: 0;
   bottom: 0;
-  border: 1px solid darkcyan;
+  /*border: 1px solid darkcyan;*/
 }
 .overview{ 
   position: absolute;
@@ -343,7 +350,6 @@ h1{
   transform: translateY(0);
 }
 /*MOVIE INFORMATION END*/
-
 
 /*main end*/
 
@@ -438,13 +444,13 @@ main {
   width: 139px ;
   height: 195px;
 }
-#movieTitle{
-  font-size: 1em;
+.movieTitle{
+  font-size: 0.9em;
 }
-#ratings, .genre, #duration, .overview{
+.ratings, .genre, .duration, .overview{
   font-size: 0.6em;
 }
-#duration{
+.duration{
   padding-left: 0;
 }
 /*MAIN CONTENT ON MOBILE END*/
