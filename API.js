@@ -1,5 +1,5 @@
 function clickLogin(){
-  alert("Design lang to HAHAHAHA")
+  alert("Design lang to HAHAHAHAHA")
 }
 //GLOBAL VARIABLES
 const mContainer = document.getElementById("movieDisplay");
@@ -9,7 +9,7 @@ const movieHeading = document.querySelector(".movieHeading");
 const mostPopularUrl = 'https://imdb236.p.rapidapi.com/imdb/most-popular-movies'; //ENDPOINT 1 (POPULAR MOVIES)
 const searchBaseUrl_1 = `https://imdb236.p.rapidapi.com/imdb/search?primaryTitle=`; //ENDPOINT 2.1 (BEFORE USER INPUT)
 const searchBaseUrl_2 = `&rows=25&startYearFrom=2000&sortOrder=DESC&sortField=numVotes`; //ENDPOINT 2.2 (AFTER USER INPUT)
-//MY PERSONAL API KEY//
+//PERSONAL API KEY//
 const options = {
 	method: 'GET',
 	headers: {
@@ -28,21 +28,23 @@ async function displayPopular() {
   	const result = await response.json();
   	//console.log(result);
   	//loop the result
-  	renderMovies(result);
+  	renderMovies(result); //LOOP FUNC
   } catch (error) {
   	console.error(error);
   }
 };
-//DISPLAY POPULAR MOVIES SYNTAX END//
+
 //displayPopular(); //initial call Displaying Popular Movies
 
 
 //USER SEARCH FOR MOVIE//
+  //GLOBAL VARIABLES
 let apiSearchUrl; //For the full API URL INCLUDING USERS INPUT
 const form = document.getElementById("searchForm");
 const searchInput = document.getElementById("searchForMovie");
-//formatting Users Input
+
 function formatUserInput(input) {
+  //formatting Users Input
   return input.toLowerCase().replace(/ /g, '%20');
 }
 
@@ -55,7 +57,7 @@ form.addEventListener('submit', async (inputEvent) => { //Only Triggers if User 
   const showError = document.querySelector("#displayError");
   
   if(!userInput){
-    movieHeading.textContent = "Popular";
+    movieHeading.textContent = "Most Popular Movies";
     showError.style.display = "none";
     await displayPopular(); // Display Popular if (Entered) blank search
     return;
@@ -76,6 +78,7 @@ form.addEventListener('submit', async (inputEvent) => { //Only Triggers if User 
       }else{
       //Loops the result.results
       renderMovies(searchResult);
+      showError.style.display = "none";
       }
     }catch (error) {
       console.log("Error Fetching Data", error);

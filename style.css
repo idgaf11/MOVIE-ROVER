@@ -3,15 +3,17 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+@font-face {
+  font-family: "hero-assemble";
+  src: url("font/hero14.ttf");
+}
+
 body{
   background: linear-gradient(to right, #000000, #414141);
   backdrop-filter: blur(20px);
   opacity: 0.8;
 }
-@font-face {
-  font-family: "hero-assemble";
-  src: url("font/hero14.ttf");
-}
+
 /*navbar*/
 nav{
   display: flex;
@@ -133,9 +135,11 @@ h1{
 .container1{
   height: 85px;
   display: flex;
-  /*border: 1px solid chocolate;*/
+  border-bottom: 1px solid white;
 }
 .movieHeading{
+  display: flex;
+  align-content: center;
   padding: 20px 0;
   width: 50%;
   font-size: 1.7em;
@@ -187,6 +191,7 @@ h1{
 /*SEARCHBAR END*/
 #displayError {
   display: none;
+  padding-top: 20px;
   width: 100%;
 }
 /*MOVIE INFORMATION*/
