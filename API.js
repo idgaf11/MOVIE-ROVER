@@ -34,25 +34,19 @@ async function displayPopular() {
   }
 };
 
-//displayPopular(); //initial call Displaying Popular Movies
+displayPopular(); //initial call Displaying Popular Movies
 
 
 //USER SEARCH FOR MOVIE//
   //GLOBAL VARIABLES
 let apiSearchUrl; //For the full API URL INCLUDING USERS INPUT
 const form = document.getElementById("searchForm");
-const searchInput = document.getElementById("searchForMovie");
+const searchInput = document.getElementById("userInput");
 
-function formatUserInput(input) {
-  //formatting Users Input
-  return input.toLowerCase().replace(/ /g, '%20');
-}
-
-form.addEventListener('submit', async (inputEvent) => { //Only Triggers if User try to Search
-  inputEvent.preventDefault();
-  const userInput = searchInput.value.trim();
-  const formattedValue = formatUserInput(userInput);
-  const apiSearchUrl = searchBaseUrl_1+formattedValue+searchBaseUrl_2;
+form.addEventListener('submit', async (searchEvent) => { //Only Triggers if User try to Search
+  searchEvent.preventDefault();
+  const userInput = searchInput.value;
+  const apiSearchUrl = searchBaseUrl_1+userInput+searchBaseUrl_2;
   
   const showError = document.querySelector("#displayError");
   
