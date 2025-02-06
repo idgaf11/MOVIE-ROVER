@@ -271,14 +271,13 @@ h1{
 }
 .movieTitle{
   display: flex;
-  align-items: center;
   /*white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; */
   padding: 0 5px;
   height: 70%;
   width: 80%;
-  overflow-y: auto;
+  overflow: auto;
   font-weight: Bold;
   font-size: 1.2em;
   /*border: 1px solid green;*/
