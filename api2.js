@@ -59,16 +59,16 @@ function displayAll(tv, mv){
 displayAll(tvTrend, mvTrend); 
 
 //GET MOVIE/SERIES DATA BY ID FROM (1)
-function getID(dataIDs){
+function getID(data_1){
   mContainer.innerHTML=' ';
   //LOOPS THE ID's FROM (1) ALONG WITH FULL INFORMATIONS
-  dataIDs.forEach((inData)=>{
-      const trueID = inData.id; //GETS EVERY ID
+  data_1.forEach((data_2)=>{
+      const data_id = data_2.id; //GETS EVERY ID
       //console.log(trueID);
       //EACH ID WILL FETCH INDIVIDUALLY TO GET COMPLETE DATA
       async function fetchByID(url) {
         try {
-          const response = await fetch(url+trueID+getIdLast, options);
+          const response = await fetch(url+data_id+getIdLast, options);
           const data = await response.json();
           //console.log(data);
 
