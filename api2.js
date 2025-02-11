@@ -12,7 +12,7 @@ const userInput = document.getElementById("userInput");
 
 
 //API ENDPOINTS URL FROM TMDB {
-//search ID to get Data
+//search ID to get "COMPLETE" Data
 const movieByID = 'https://api.themoviedb.org/3/movie/';
 const seriesByID = 'https://api.themoviedb.org/3/tv/';
 const getIdLast = '?language=en-US'
