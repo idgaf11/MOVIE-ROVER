@@ -16,10 +16,10 @@ const userInput = document.getElementById("userInput");
 const movieByID = 'https://api.themoviedb.org/3/movie/';
 const seriesByID = 'https://api.themoviedb.org/3/tv/';
 const getIdLast = '?language=en-US'
-//all trend
+//all trend //will display first
 const mvTrend = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
 const tvTrend = 'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
-//Search to get ID only
+//to get movie/series id's purpose  only
 const searchMovie = 'https://api.themoviedb.org/3/search/movie?query=';
 const searchTV = 'https://api.themoviedb.org/3/search/tv?query=';
 const plusUrl = '&include_adult=false&language=en-US&page=1';
@@ -47,7 +47,7 @@ async function fetchData(url){
     console.log(error);
   }
 };
-//func to fetch either mv || tv
+//func to fetch either movie || tvShow API
 function displayAll(tv, mv){
   if(tvPage){
     fetchData(tv);
@@ -65,9 +65,10 @@ function getID(data_1){
   data_1.forEach((data_2)=>{
       const data_id = data_2.id; //GETS EVERY ID
       //console.log(trueID);
-      //EACH ID WILL FETCH INDIVIDUALLY TO GET COMPLETE DATA
+      //FIND INFORMATIONS USING ID
       async function fetchByID(url) {
         try {
+          //FETCH URL WIDTH ID
           const response = await fetch(url+data_id+getIdLast, options);
           const data = await response.json();
           //console.log(data);
@@ -124,7 +125,7 @@ function getID(data_1){
            }
          };
          
-         mContainer.appendChild(newDiv);
+         mContainer.appendChild(newDiv); // To display new div ceated
          
         } catch (error) {
           console.log(error);
@@ -143,6 +144,7 @@ function roundOff(num){
   return Math.round(num * 10)/10;
 };
 
+//IF USER SEARCH THIS EVENT LISTERNER TRIGGER
 searchForm.addEventListener('submit', (searchEvent)=>{
   searchEvent.preventDefault();
   const inputValue = userInput.value;
