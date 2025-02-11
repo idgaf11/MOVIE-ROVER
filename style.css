@@ -39,7 +39,7 @@ nav{
 }
 .logoNameContainer{
   display: flex;
-  width: 40%;
+  width: 45%;
 }
 .logoName{
   padding: 20px 0;
@@ -55,7 +55,7 @@ nav{
 }
 navbar{
   height: 100%;
-  width: 60%;
+  width: 55%;
   text-align: right;
   /*border: 1px solid red;*/
 }
