@@ -398,7 +398,7 @@ footer{
     background-size: 50px;
   } 
   navbar{
-    padding: 0 3px;
+    padding: 0;
     display: block;
     height: 40%;
     width: 100%;
