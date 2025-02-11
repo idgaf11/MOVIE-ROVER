@@ -457,7 +457,7 @@ footer{
     font-size: 0.9em;
   }
   .ratings, .genre, .duration, .overview{
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
   .duration{
     padding-left: 0;
