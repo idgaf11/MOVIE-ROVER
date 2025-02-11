@@ -378,17 +378,20 @@ footer{
     margin: auto;
     padding: 0;
     height: 60%;
-    width: 70%;
+    width: 100%;
+    text-align: center;
   }
   .logoName{
     padding: 9px 0;
-    width: 80%;
+    width: 100%;
     font-size: 2em;
+    text-align: center;
   }
+  
   .icon{
     width: 20%;
     background-size: 50px;
-  }
+  } 
   navbar{
     padding: 0 3px;
     display: block;
