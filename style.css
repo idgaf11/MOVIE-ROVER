@@ -370,94 +370,94 @@ footer{
 
 @media(max-width: 768px){
 /*NAV*/
-nav{
-  display: block;
-  height: 5.6em;
-}
-.logoNameContainer{
-  margin: auto;
-  padding: 0;
-  height: 60%;
-  width: 70%;
-}
-.logoName{
-  padding: 9px 0;
-  width: 80%;
-  font-size: 2em;
-}
-.icon{
-  width: 20%;
-  background-size: 50px;
-}
-navbar{
-  padding: 0 3px;
-  display: block;
-  height: 40%;
-  width: 100%;
-  text-align: center;
-}
-.navOption{
-  margin: 0;
-  padding: 11px 7px;
-  height: 100%;
-}
-#loginBtn{
-  margin: 0;
-  padding: 10px;
-}
-/*NAV END*/
-/*MAIN*/
-main {
-  width: 94%;
-  margin-left: 3%;
-  margin-right: 3%;
-  padding: 0;
-  border-radius: 30px;
-}
-.mainHome{
-  text-align: center;
-}
-.topHeading{
-  padding: 10px;
-  width: 100%;
-  text-align: center;
-}
-/*SEARCH BAR MOBILE*/
-.container1{
-  height: auto;
-}
-.searchBarContainer{
-  width: 100%;
-  text-align: center;
-}
-.searchBar{
-  margin: 8px auto;
-  width: 70%;
-}
-.searchBtn{
-  display:none;
-}
-/*SEARCH BAR MOBILE END*/
-/* MAIN CONTEN ON MOBILE*/
-.container1{
-  display: block;
-}
-.movieContainer{
-  width: 139px;
-  height: 247px;
-}
-.posterContainer{
-  width: 139px ;
-  height: 195px;
-}
-.movieTitle{
-  font-size: 0.9em;
-}
-.ratings, .genre, .duration, .overview{
-  font-size: 0.6em;
-}
-.duration{
-  padding-left: 0;
-}
-/*MAIN CONTENT ON MOBILE END*/
+  nav{
+    display: block;
+    height: 5.6em;
+  }
+  .logoNameContainer{
+    margin: auto;
+    padding: 0;
+    height: 60%;
+    width: 70%;
+  }
+  .logoName{
+    padding: 9px 0;
+    width: 80%;
+    font-size: 2em;
+  }
+  .icon{
+    width: 20%;
+    background-size: 50px;
+  }
+  navbar{
+    padding: 0 3px;
+    display: block;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+  }
+  .navOption{
+    margin: 0;
+    padding: 11px 7px;
+    height: 100%;
+  }
+  #loginBtn{
+    margin: 0;
+    padding: 10px;
+  }
+  /*NAV END*/
+  /*MAIN*/
+  main {
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 0;
+    border-radius: 30px;
+  }
+  .mainHome{
+    text-align: center;
+  }
+  .topHeading{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  /*SEARCH BAR MOBILE*/
+  .container1{
+    height: auto;
+  }
+  .searchBarContainer{
+    width: 100%;
+    text-align: center;
+  }
+  .searchBar{
+    margin: 8px auto;
+    width: 70%;
+  }
+  .searchBtn{
+    display:none;
+  }
+  /*SEARCH BAR MOBILE END*/
+  /* MAIN CONTEN ON MOBILE*/
+  .container1{
+    display: block;
+  }
+  .movieContainer{
+    width: 139px;
+    height: 247px;
+  }
+  .posterContainer{
+    width: 139px ;
+    height: 195px;
+  }
+  .movieTitle{
+    font-size: 0.9em;
+  }
+  .ratings, .genre, .duration, .overview{
+    font-size: 0.6em;
+  }
+  .duration{
+    padding-left: 0;
+  }
+  /*MAIN CONTENT ON MOBILE END*/
 }
