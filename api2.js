@@ -131,11 +131,11 @@ function getID(data_1){
           console.log(error);
         };
       }; 
-      
+
       if(tvPage){
-        fetchByID(seriesByID);
+        fetchByID(tv);
       }else if(mvPage){
-        fetchByID(movieByID);
+        fetchByID(mv);
       };
   })//for each end
 };//function end
