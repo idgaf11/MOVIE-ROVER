@@ -376,6 +376,7 @@ footer{
 @media(max-width: 700px){
 /*NAV*/
   nav{
+    padding: 3px;
     flex-wrap: wrap;
     height: 5.6em;
   }
