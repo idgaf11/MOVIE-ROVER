@@ -376,7 +376,7 @@ footer{
 @media(max-width: 768px){
 /*NAV*/
   nav{
-    display: block;
+    flex-wrap: wrap;
     height: 5.6em;
   }
   .logoNameContainer{
