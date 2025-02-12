@@ -201,18 +201,19 @@ h1{
   padding-top: 20px;
   width: 100%;
 }
-.loader {
-  width: 50px;
-  aspect-ratio: 1;
-  display: flex;
-}
 .loadCon{
+  display: none;
   display: flex;
   justify-content: center;
   margin-top: 50px;
   width: 100%;
 }
 /** loader from web **/
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: flex;
+}
 .loader:before, .loader:after {
   content: "";
   flex: 1;
