@@ -73,7 +73,7 @@ function getID(data_1){
       //FIND INFORMATIONS USING ID
       async function fetchByID(url) {
         try {
-          //FETCH URL WIDTH ID
+          //FETCH URL WITH ID
           const response = await fetch(url+data_id+getIdLast, options);
           const data = await response.json();
           //console.log(data);
