@@ -207,6 +207,9 @@ h1{
   margin-top: 50px;
   width: 100%;
 }
+.loadCon2{
+  display: flex;
+}
 /** loader from web **/
 .loader {
   width: 50px;
