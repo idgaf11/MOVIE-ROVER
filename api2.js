@@ -71,14 +71,14 @@ function getID(data_1){
           //FETCH URL WIDTH ID
           const response = await fetch(url+data_id+getIdLast, options);
           const data = await response.json();
-          //console.log(data);
+          console.log(data);
           
           const genreNames = data.genres?.map(genre => genre.name).join(',')??'No genre available';
           const newDiv = document.createElement('div');
           newDiv.className = 'movieContainer';
           newDiv.innerHTML = `<div>
             <div class="posterContainer">
-              <div class="movieType">MOVIE</div>
+              <div class="movieType">${data.first_air_date || data.release_date}</div>
               <div class="overview">
                 <p>OVERVIEW</p>
                 <span>${data.overview}</span>
@@ -97,13 +97,14 @@ function getID(data_1){
              </div>
           </div>`;
           //DIV CONFIGURATIONS↓↓↓
+        /**
          const movieType = newDiv.querySelector(".movieType");
          if(tvPage){
            movieType.textContent='TV SERIES';
          }else if(mvPage){
            movieType.textContent='MOVIE';
          };
-         
+         **/
          const theRate = newDiv.querySelector(".ratings");
          if(theRate){
            const rating = data.vote_average;
