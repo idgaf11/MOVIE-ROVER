@@ -128,7 +128,7 @@ function getID(data_1){
          
         } catch (error) {
           console.log(error);
-        };
+        }
       }; 
         
       if(tvPage){
