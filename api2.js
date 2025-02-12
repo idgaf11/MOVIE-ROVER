@@ -41,9 +41,13 @@ async function fetchData(url){
     const result = await response.json();
     const data = result.results;
     //console.log(result);
-    
-    getID(data);
-    
+    if(result.total_results == 0){
+      displayError.style.display = 'block';
+      mContainer.innerHTML=' ';
+    }else{
+      displayError.style.display = 'none';
+      getID(data);
+    }
   } catch (error) {
     console.log(error);
   }
@@ -151,8 +155,8 @@ searchForm.addEventListener('submit', (searchEvent)=>{
   topLabel.textContent = `Result(s) for "${inputValue}"`;
   
   if(!inputValue){
-    toDisplay(tvTrend, mvTrend);
+    displayAll(tvTrend, mvTrend);
     topLabel.textContent = origTopLabel;
-  };
+  }
   
 });
