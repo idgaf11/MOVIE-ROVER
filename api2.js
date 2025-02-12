@@ -11,7 +11,7 @@ const searchForm = document.getElementById("searchForm");
 const userInput = document.getElementById("userInput");
 const displayError = document.getElementById("displayError");
 
-//API ENDPOINTS URL FROM TMDB {
+//API ENDPOINTS URL FROM TMDB ↓↓↓
 //search ID to get "COMPLETE" Data
 const movieByID = 'https://api.themoviedb.org/3/movie/';
 const seriesByID = 'https://api.themoviedb.org/3/tv/';
@@ -23,7 +23,7 @@ const tvTrend = 'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
 const searchMovie = 'https://api.themoviedb.org/3/search/movie?query=';
 const searchTV = 'https://api.themoviedb.org/3/search/tv?query=';
 const plusUrl = '&include_adult=false&language=en-US&page=1';
-//}
+//↑↑↑
 const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 //API KEY 
 const options = {
