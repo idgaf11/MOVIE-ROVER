@@ -34,7 +34,7 @@ const options = {
   }
 };
 
-//1. INITIAL FETCH API TO GET ID - INCOMPLETE DATA
+//1. INITIAL FETCH API TO GET ID ONLY - INCOMPLETE DATA
 async function fetchData(url){
   try {
     const response = await fetch(url, options);
