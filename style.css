@@ -30,23 +30,16 @@ nav{
         linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
   
 }
-.icon{
-  display: none;
-  width: 15%;
-  background-image: url("img/logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 45px;
-}
 .logoNameContainer{
   display: flex;
   width: 45%;
   /*border: 1px solid green;*/
 }
 .logoName{
-  padding: 20px 0;
+  display: flex;
+  align-items: center;
   height: 100%;
-  width: 80%;
+  width: 100%;
   background: linear-gradient(to right, #fa709a, #fee140);
   background-clip: text;
   color: transparent;
@@ -395,6 +388,7 @@ h1{
   bottom: 0;
   font-size: 1em;
   overflow: auto;
+  color: black;
   background-color: #E2DFD2;
   transform: translateY(101%);
   transition-duration: 1s;
@@ -430,23 +424,16 @@ footer{
     height: 5.6em;
   }
   .logoNameContainer{
-    margin: auto;
-    padding: 0;
     height: 60%;
     width: 100%;
-    text-align: center;
+    border: 1px solid green;
   }
   .logoName{
-    padding: 9px 0;
+    justify-content: center;
     width: 100%;
     font-size: 2em;
-    text-align: center;
+    border: 1px solid violet;
   }
-  
-  .icon{
-    width: 20%;
-    background-size: 50px;
-  } 
   navbar{
     justify-content: center;
     padding: 0;
