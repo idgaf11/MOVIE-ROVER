@@ -72,7 +72,8 @@ function getID(data_1){
           const response = await fetch(url+data_id+getIdLast, options);
           const data = await response.json();
           //console.log(data);
-
+          
+          const genreNames = data.genres?.map(genre => genre.name).join(',')??'No genre available';
           const newDiv = document.createElement('div');
           newDiv.className = 'movieContainer';
           newDiv.innerHTML = `<div>
@@ -90,7 +91,7 @@ function getID(data_1){
                   <p class="ratings">${roundOff(data.vote_average)}</p>
                 </span>
                 <span class="genreContainer">
-                  <p class="genre movieDetails">none</p>
+                  <p class="genre movieDetails">${genreNames}</p>
                   </span>
                 <span class="movieDetails duration">N/A</span>
              </div>
