@@ -1,6 +1,6 @@
 function clickLogin(){
   alert("Design lang to HAHAHAHAHA")
-}
+};
 //DOM REF.
 const mContainer = document.querySelector(".container2");
 const topLabel = document.querySelector(".topHeading");
@@ -9,7 +9,7 @@ const mvPage = document.getElementById("moviePage");
 const tvPage = document.getElementById("seriesPage");
 const searchForm = document.getElementById("searchForm");
 const userInput = document.getElementById("userInput");
-
+const displayError = document.getElementById("displayError");
 
 //API ENDPOINTS URL FROM TMDB {
 //search ID to get "COMPLETE" Data
@@ -40,7 +40,8 @@ async function fetchData(url){
     const response = await fetch(url, options);
     const result = await response.json();
     const data = result.results;
-    //console.log(data);
+    //console.log(result);
+    
     getID(data);
     
   } catch (error) {
@@ -71,7 +72,7 @@ function getID(data_1){
           //FETCH URL WIDTH ID
           const response = await fetch(url+data_id+getIdLast, options);
           const data = await response.json();
-          console.log(data);
+          //console.log(data);
           
           const genreNames = data.genres?.map(genre => genre.name).join(',')??'No genre available';
           const newDiv = document.createElement('div');
@@ -152,6 +153,6 @@ searchForm.addEventListener('submit', (searchEvent)=>{
   if(!inputValue){
     toDisplay(tvTrend, mvTrend);
     topLabel.textContent = origTopLabel;
-  }
+  };
   
 });
