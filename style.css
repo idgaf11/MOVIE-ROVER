@@ -426,13 +426,11 @@ footer{
   .logoNameContainer{
     height: 60%;
     width: 100%;
-    border: 1px solid green;
   }
   .logoName{
     justify-content: center;
     width: 100%;
     font-size: 2em;
-    border: 1px solid violet;
   }
   navbar{
     justify-content: center;
