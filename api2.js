@@ -10,6 +10,7 @@ const tvPage = document.getElementById("seriesPage");
 const searchForm = document.getElementById("searchForm");
 const userInput = document.getElementById("userInput");
 const displayError = document.getElementById("displayError");
+const loadCon = document.querySelector(".loadCon");
 
 //API ENDPOINTS URL FROM TMDB ↓↓↓
 //search by ID to get "COMPLETE" Data
@@ -53,11 +54,11 @@ async function fetchData(url){
   }
 };
 //func to fetch either movie || tvShow API
-function displayAll(tv, mv){
+async function displayAll(tv, mv){
   if(tvPage){
-    fetchData(tv);
+    await fetchData(tv);
   }else if(mvPage){
-    fetchData(mv);
+    await fetchData(mv);
   }
 };
 //Initial Call - Display Trending - Complete Data
@@ -144,19 +145,26 @@ function roundOff(num){
 };
 
 //IF USER SEARCH THIS EVENT LISTERNER TRIGGER
-searchForm.addEventListener('submit', (searchEvent)=>{
+searchForm.addEventListener('submit', async (searchEvent)=>{
   searchEvent.preventDefault();
   const inputValue = userInput.value;
-  const tvSearchURL = searchTV+inputValue+plusUrl;
-  const mvSearchURL = searchMovie+inputValue+plusUrl;
+  mContainer.innerHTML=' ';
+  loadCon.style.display = 'flex';
   
-  displayAll(tvSearchURL, mvSearchURL);
-  
-  topLabel.textContent = `Result(s) for "${inputValue}"`;
-  
-  if(!inputValue){
-    displayAll(tvTrend, mvTrend);
-    topLabel.textContent = origTopLabel;
+  try{
+    if(!inputValue){
+      await displayAll(tvTrend, mvTrend);
+      topLabel.textContent = origTopLabel;
+    }else{
+      const tvSearchURL = searchTV+inputValue+plusUrl;
+      const mvSearchURL = searchMovie+inputValue+plusUrl;
+      await displayAll(tvSearchURL, mvSearchURL);
+      topLabel.textContent = `Result(s) for "${inputValue}"`;
+    }
+  }catch(error){
+    console.log(error);
+  }finally{
+    loadCon.style.display = 'none';
   }
   
 });
