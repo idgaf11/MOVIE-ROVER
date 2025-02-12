@@ -97,14 +97,6 @@ function getID(data_1){
              </div>
           </div>`;
           //DIV CONFIGURATIONS↓↓↓
-        /**
-         const movieType = newDiv.querySelector(".movieType");
-         if(tvPage){
-           movieType.textContent='TV SERIES';
-         }else if(mvPage){
-           movieType.textContent='MOVIE';
-         };
-         **/
          const theRate = newDiv.querySelector(".ratings");
          if(theRate){
            const rating = data.vote_average;
@@ -126,7 +118,7 @@ function getID(data_1){
              duration.textContent = `S${season} E${episode}`;
            }
          };
-         
+         //DIV CONFIGURATIONS↑↑↑
          mContainer.appendChild(newDiv); // To display new div ceated
          
         } catch (error) {
