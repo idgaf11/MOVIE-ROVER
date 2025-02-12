@@ -206,7 +206,13 @@ h1{
   aspect-ratio: 1;
   display: flex;
 }
-/** loading from web **/
+.loadCon{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+/** loader from web **/
 .loader:before, .loader:after {
   content: "";
   flex: 1;
