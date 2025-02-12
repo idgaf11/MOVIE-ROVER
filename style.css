@@ -352,7 +352,6 @@ h1{
   bottom: 0;
   font-size: 1em;
   overflow: auto;
-  color: black;
   background-color: #E2DFD2;
   transform: translateY(101%);
   transition-duration: 1s;
