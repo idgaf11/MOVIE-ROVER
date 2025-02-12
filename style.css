@@ -66,6 +66,7 @@ navbar{
   padding: 34px 1.3em;
   text-align: center;
   font-size: 1em;
+  white-space: nowrap;
   text-decoration: none;
   color: white;
   /*border: 1px solid green;*/
@@ -79,7 +80,8 @@ navbar{
 }
 #loginBtn{
   margin: 19px;
-  padding: 1em 2em;
+  /*padding: 1em 2em; */
+  text-align: center;
   color: black;
   font-weight: bold;
   width: 80px;
