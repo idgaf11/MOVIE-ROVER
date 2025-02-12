@@ -222,7 +222,7 @@ h1{
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  position: relative;
+  /**position: relative;**/
   margin: 10px 9px; 
   width: 189px; /* ADJUST-THIS IS WIDTH*/
   height: 347px;
@@ -276,9 +276,6 @@ h1{
 }
 .movieTitle{
   display: flex;
-  /*white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
   padding: 0 5px;
   height: 70%;
   width: 80%;
@@ -310,15 +307,17 @@ h1{
 }
 .genreContainer{
   display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
   align-items: center;
   padding-left: 3px;
   height: 30%;
-  width: auto;
-  max-width: 70%;
+  width: 70%;
   /*border: 1px solid red;*/
 }
 .genre{
   padding: 0 7px;
+  max-width: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
