@@ -130,7 +130,7 @@ function getID(data_1){
           console.log(error);
         };
       }; 
-
+        
       if(tvPage){
         fetchByID(seriesByID);
       }else if(mvPage){
