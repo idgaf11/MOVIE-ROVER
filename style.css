@@ -265,7 +265,7 @@ h1.welcomeText{
   align-items: center;
   color: white;
 }
-.movieContainer{
+.movieCard{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -410,7 +410,7 @@ h1.welcomeText{
   font-weight: bold;
   font-size: 1.5em;
 }
-.movieContainer:hover .overview{
+.movieCard:hover .overview{
   transform: translateY(0);
 }
 /*MOVIE INFORMATION END*/
@@ -499,7 +499,7 @@ footer{
   .container2{
     grid-template-columns: repeat(auto-fill, 139px);
   }
-  .movieContainer{
+  .movieCard{
     width: 139px;
     height: 247px;
   }
