@@ -245,7 +245,6 @@ h1.welcomeText{
   95%,
   100% {background-size: 100% 4px,4px 100%,100% 4px,4px 50% ,100% 4px}
 }
-
 /*MOVIE INFORMATION*/
 .container2{
   display: grid;
@@ -361,7 +360,6 @@ h1.welcomeText{
   border-radius: 10px;
   background-color: #414141;
   border: 1px solid #E2DFD2;
-  
 }
 .genreContainer{
   display: flex;
@@ -420,7 +418,6 @@ h1.welcomeText{
   transform: translateY(0);
 }
 /*MOVIE INFORMATION END*/
-
 /*main end*/
 
 /*footer */
@@ -431,8 +428,6 @@ footer{
   height: 125px;
   background-color: #8A8A8A;
 }
-
-
 @media(max-width: 700px){
 /*NAV*/
   nav{
