@@ -148,6 +148,7 @@ h1.welcomeText{
 /*SEARCH BAR - MOVIE PAGE*/ 
 .container1{
   display: flex;
+  flex-wrap: wrap;
   height: 85px;
   width: 100%;
   border-bottom: 1px solid white;
@@ -215,15 +216,6 @@ h1.welcomeText{
   margin-top: 50px;
   width: 100%;
 }
-/**
-.loadCon2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  border: 1px solid white;
-}*/
-/** loader from web **/
 .loader {
   width: 50px;
   aspect-ratio: 1;
@@ -265,10 +257,6 @@ h1.welcomeText{
   padding-bottom: 9px;
   max-width: 100%;
   border: 1px solid violet;
-}
-.container2::after{
-  content: "";
-  margin: 0 auto;
 }
 .errorMess{
   display: flex;
@@ -508,8 +496,8 @@ footer{
   }
   /*SEARCH BAR MOBILE END*/
   /* MAIN CONTEN ON MOBILE*/
-  .container1{
-    display: block;
+  .container2{
+    grid-template-columns: repeat(auto-fill, 139px);
   }
   .movieContainer{
     width: 139px;
