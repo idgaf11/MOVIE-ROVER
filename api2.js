@@ -15,7 +15,8 @@ const movieByID = "https://api.themoviedb.org/3/movie/";
 const seriesByID = "https://api.themoviedb.org/3/tv/";
 const getIdLast = "?language=en-US";
 //all trend //will display upon load
-const mvTrend = "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
+const mvTrend =
+"https://api.themoviedb.org/3/trending/movie/day?language=en-US";
 const tvTrend = "https://api.themoviedb.org/3/trending/tv/day?language=en-US";
 //to get movie/series id's purpose  only
 const searchMovie = "https://api.themoviedb.org/3/search/movie?query=";
