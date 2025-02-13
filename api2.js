@@ -86,7 +86,7 @@ function getID(data_1){
           newDiv.className = 'movieCard';
           newDiv.innerHTML = `<div>
             <div class="posterContainer">
-              <div class="movieType">${data.first_air_date || data.release_date}</div>
+              <div class="date">${data.first_air_date || data.release_date}</div>
               <div class="overview movieDetails">
                 <p>OVERVIEW</p>
                 <span>${data.overview}</span>
