@@ -210,18 +210,19 @@ h1.welcomeText{
   width: 100%;
 }
 .loadCon{
-  display: none;
+  display: flex;
   justify-content: center;
   margin-top: 50px;
   width: 100%;
 }
+/**
 .loadCon2{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   border: 1px solid white;
-}
+}*/
 /** loader from web **/
 .loader {
   width: 50px;
