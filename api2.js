@@ -46,6 +46,7 @@ async function fetchData(url){
     if(result.total_results == 0){
       displayError.style.display = 'block';
       mContainer.innerHTML=' ';
+      loadCon.style.display = 'none';
     }else{
       displayError.style.display = 'none';
       getID(data);
@@ -104,7 +105,7 @@ function getID(data_1){
                 <span class="movieDetails duration">N/A</span>
              </div>
           </div>`;
-          //DIV CONFIGURATIONS↓↓↓
+          //MOVIE-CARD CONFIGURATIONS↓↓↓
          const theRate = newDiv.querySelector(".ratings");
          if(theRate){
            const rating = data.vote_average;
@@ -133,7 +134,7 @@ function getID(data_1){
           console.log(error);
         }
       }; 
-        
+        //fetch by id tv or movie?
       if(tvPage){
         fetchByID(seriesByID);
       }else if(mvPage){
@@ -165,8 +166,6 @@ searchForm.addEventListener('submit', async (searchEvent)=>{
     }
   }catch(error){
     console.log(error);
-  }finally{
-    loadCon.style.display = 'none';
   }
   
 });
