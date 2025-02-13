@@ -11,6 +11,7 @@ const searchForm = document.getElementById("searchForm");
 const userInput = document.getElementById("userInput");
 const displayError = document.getElementById("displayError");
 const loadCon = document.querySelector(".loadCon");
+const loadCon2 = document.querySelector(".loadCon2");
 
 //API ENDPOINTS URL FROM TMDB ↓↓↓
 //search by ID to get "COMPLETE" Data
@@ -66,7 +67,8 @@ displayAll(tvTrend, mvTrend);
 
 //GET MOVIE/SERIES DATA BY ID FROM (1)
 function getID(data_1){
-  mContainer.innerHTML=' ';
+  mContainer.innerHTML='';
+  loadCon.style.display= 'none';
   //LOOPS THE ID's FROM (1) ALONG WITH FULL INFORMATIONS
   data_1.forEach((data_2)=>{
       const data_id = data_2.id; //GETS EVERY ID
