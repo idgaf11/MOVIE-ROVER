@@ -83,7 +83,7 @@ function getID(data_1){
           
           const genreNames = data.genres?.map(genre => genre.name).join(',')??'No genre available';
           const newDiv = document.createElement('div');
-          newDiv.className = 'movieContainer';
+          newDiv.className = 'movieCard';
           newDiv.innerHTML = `<div>
             <div class="posterContainer">
               <div class="movieType">${data.first_air_date || data.release_date}</div>
