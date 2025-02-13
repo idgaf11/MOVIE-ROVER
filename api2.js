@@ -34,17 +34,17 @@ const options = {
 };
 
 //1. INITIAL FETCH API TO GET ID ONLY - INCOMPLETE DATA
-async function fetchData(url){
+async function fetchData(url) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
     const data = result.results;
     //console.log(result);
-    if(result.total_results == 0){
+    if (result.total_results == 0) {
       displayError.style.display = 'block';
-      mContainer.innerHTML=' ';
+      mContainer.innerHTML = ' ';
       loadCon.style.display = 'none';
-    }else{
+    } else {
       displayError.style.display = 'none';
       getID(data);
     }
@@ -53,36 +53,36 @@ async function fetchData(url){
   }
 };
 //func to fetch either movie || tvShow API
-async function displayAll(tv, mv){
-  if(tvPage){
+async function displayAll(tv, mv) {
+  if (tvPage) {
     await fetchData(tv);
-  }else if(mvPage){
+  } else if (mvPage) {
     await fetchData(mv);
   }
 };
 //Initial Call - Display Trending - Complete Data
-displayAll(tvTrend, mvTrend); 
+displayAll(tvTrend, mvTrend);
 
 //GET MOVIE/SERIES DATA BY ID FROM (1)
-function getID(data_1){
-  mContainer.innerHTML='';
-  loadCon.style.display= 'none';
+function getID(data_1) {
+  mContainer.innerHTML = '';
+  loadCon.style.display = 'none';
   //LOOPS THE ID's FROM (1) ALONG WITH FULL INFORMATIONS
-  data_1.forEach((data_2)=>{
-      const data_id = data_2.id; //GETS EVERY ID
-      //console.log(trueID);
-      //FIND INFORMATIONS USING ID
-      async function fetchByID(url) {
-        try {
-          //FETCH URL WITH ID
-          const response = await fetch(url+data_id+getIdLast, options);
-          const data = await response.json();
-          //console.log(data);
-          
-          const genreNames = data.genres?.map(genre => genre.name).join(',')??'No genre available';
-          const newDiv = document.createElement('div');
-          newDiv.className = 'movieCard';
-          newDiv.innerHTML = `<div>
+  data_1.forEach((data_2) => {
+    const data_id = data_2.id; //GETS EVERY ID
+    //console.log(trueID);
+    //FIND INFORMATIONS USING ID
+    async function fetchByID(url) {
+      try {
+        //FETCH URL WITH ID
+        const response = await fetch(url + data_id + getIdLast, options);
+        const data = await response.json();
+        //console.log(data);
+
+        const genreNames = data.genres?.map(genre => genre.name).join(',') ?? 'No genre available';
+        const newDiv = document.createElement('div');
+        newDiv.className = 'movieCard';
+        newDiv.innerHTML = `<div>
             <div class="posterContainer">
               <div class="date">${data.first_air_date || data.release_date}</div>
               <div class="overview movieDetails">
@@ -102,70 +102,69 @@ function getID(data_1){
                 <span class="movieDetails duration">N/A</span>
              </div>
           </div>`;
-          //MOVIE-CARD CONFIGURATIONS↓↓↓
-         const theRate = newDiv.querySelector(".ratings");
-         if(theRate){
-           const rating = data.vote_average;
-           if(rating < 4 || rating === "null"){
-             theRate.style.color = "red";
-           }else if (rating < 7.5){
-             theRate.style.color = "orange";
-           }
-         };
-         
-         const duration = newDiv.querySelector(".duration");
-         if(duration){
-           const runtime = data.runtime;
-           const season = data.number_of_seasons;
-           const episode = data.number_of_episodes;
-           if(runtime){
-             duration.textContent = `${runtime}m`;
-           }else if (season && episode){
-             duration.textContent = `S${season} E${episode}`;
-           }
-         };
-         // To display new div ceated
-         mContainer.appendChild(newDiv);
-         
-        } catch (error) {
-          console.log(error);
-        }
-      }; 
-        //fetch by id tv or movie?
-      if(tvPage){
-        fetchByID(seriesByID);
-      }else if(mvPage){
-        fetchByID(movieByID);
-      };
+        //MOVIE-CARD CONFIGURATIONS↓↓↓
+        const theRate = newDiv.querySelector(".ratings");
+        if (theRate) {
+          const rating = data.vote_average;
+          if (rating < 4 || rating === "null") {
+            theRate.style.color = "red";
+          } else if (rating < 7.5) {
+            theRate.style.color = "orange";
+          }
+        };
+
+        const duration = newDiv.querySelector(".duration");
+        if (duration) {
+          const runtime = data.runtime;
+          const season = data.number_of_seasons;
+          const episode = data.number_of_episodes;
+          if (runtime) {
+            duration.textContent = `${runtime}m`;
+          } else if (season && episode) {
+            duration.textContent = `S${season} E${episode}`;
+          }
+        };
+        // To display new div ceated
+        mContainer.appendChild(newDiv);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    //fetch by id tv or movie?
+    if (tvPage) {
+      fetchByID(seriesByID);
+    } else if (mvPage) {
+      fetchByID(movieByID);
+    };
   })//for each end
 };//function end
 
-function roundOff(num){
-  return Math.round(num * 10)/10;
+function roundOff(num) {
+  return Math.round(num * 10) / 10;
 };
 
 //IF USER SEARCH THIS EVENT LISTERNER TRIGGER
-searchForm.addEventListener('submit', async (searchEvent)=>{
+searchForm.addEventListener('submit', async (searchEvent) => {
   searchEvent.preventDefault();
   const inputValue = userInput.value;
-  mContainer.innerHTML=' ';
+  mContainer.innerHTML = ' ';
   loadCon.style.display = 'flex';
-  
-  try{
-    if(!inputValue){
+
+  try {
+    if (!inputValue) {
       await displayAll(tvTrend, mvTrend);
       topLabel.textContent = origTopLabel;
-    }else{
-      const tvSearchURL = searchTV+inputValue+plusUrl;
-      const mvSearchURL = searchMovie+inputValue+plusUrl;
+    } else {
+      const tvSearchURL = searchTV + inputValue + plusUrl;
+      const mvSearchURL = searchMovie + inputValue + plusUrl;
       await displayAll(tvSearchURL, mvSearchURL);
       topLabel.textContent = `Result(s) for "${inputValue}"`;
     }
-  }catch(error){
+  } catch (error) {
     console.log(error);
   }
 });
 
-function clickLogin(){
+function clickLogin() {
   alert("Design Only :-)")
 };
