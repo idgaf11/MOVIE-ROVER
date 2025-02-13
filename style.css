@@ -95,7 +95,7 @@ main{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  align-content: flex-start;
   margin: 10px auto;
   padding: 2em 1em;
   min-height: 700px;
@@ -110,18 +110,17 @@ h1{
 }
 h1.welcomeText{
   width: 100%;
-  height: 50px;
   border: 1px solid white;
 }
 .startBtnCon{
   display: flex;
   justify-content: left;
+  align-items: center;
   width: 100%;
   height: 80px;
   border: 1px solid green;
 }
 .getStartBtn{
-  margin: 1em 0;
   padding: 1.5em;
   height: 50px;
   width: 14em;
