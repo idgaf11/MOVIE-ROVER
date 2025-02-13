@@ -12,24 +12,26 @@ const loadCon2 = document.querySelector(".loadCon2");
 
 //API ENDPOINTS URL FROM TMDB ↓↓↓
 //search by ID to get "COMPLETE" Data
-const movieByID = 'https://api.themoviedb.org/3/movie/';
-const seriesByID = 'https://api.themoviedb.org/3/tv/';
-const getIdLast = '?language=en-US'
+const movieByID = "https://api.themoviedb.org/3/movie/";
+const seriesByID = "https://api.themoviedb.org/3/tv/";
+const getIdLast = "?language=en-US";
 //all trend //will display upon load
-const mvTrend = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
-const tvTrend = 'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
+const mvTrend =
+  "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
+const tvTrend = "https://api.themoviedb.org/3/trending/tv/day?language=en-US";
 //to get movie/series id's purpose  only
-const searchMovie = 'https://api.themoviedb.org/3/search/movie?query=';
-const searchTV = 'https://api.themoviedb.org/3/search/tv?query=';
-const plusUrl = '&include_adult=false&language=en-US&page=1';
+const searchMovie = "https://api.themoviedb.org/3/search/movie?query=";
+const searchTV = "https://api.themoviedb.org/3/search/tv?query=";
+const plusUrl = "&include_adult=false&language=en-US&page=1";
 //image base url form tmdb
 const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
-//API KEY 
+//API KEY
 const options = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjcyMjQyZTJmYTU3NTZhYzJhZGVmNjMzMDM1OWNkNyIsIm5iZiI6MTczODE2NjE1NC4wNzAwMDAyLCJzdWIiOiI2NzlhNGY4YWEwNWI2MzQzNWNhOTdhMDciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.T91a241m09-Sj5KSVAT-SLKsWwu4nx9aFqGFGlv8Z-c'
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjcyMjQyZTJmYTU3NTZhYzJhZGVmNjMzMDM1OWNkNyIsIm5iZiI6MTczODE2NjE1NC4wNzAwMDAyLCJzdWIiOiI2NzlhNGY4YWEwNWI2MzQzNWNhOTdhMDciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.T91a241m09-Sj5KSVAT-SLKsWwu4nx9aFqGFGlv8Z-c"
   }
 };
 
@@ -41,17 +43,17 @@ async function fetchData(url) {
     const data = result.results;
     //console.log(result);
     if (result.total_results == 0) {
-      displayError.style.display = 'block';
-      mContainer.innerHTML = ' ';
-      loadCon.style.display = 'none';
+      displayError.style.display = "block";
+      mContainer.innerHTML = " ";
+      loadCon.style.display = "none";
     } else {
-      displayError.style.display = 'none';
+      displayError.style.display = "none";
       getID(data);
     }
   } catch (error) {
     console.log(error);
   }
-};
+}
 //func to fetch either movie || tvShow API
 async function displayAll(tv, mv) {
   if (tvPage) {
@@ -59,40 +61,48 @@ async function displayAll(tv, mv) {
   } else if (mvPage) {
     await fetchData(mv);
   }
-};
+}
 //Initial Call - Display Trending - Complete Data
 displayAll(tvTrend, mvTrend);
 
 //GET MOVIE/SERIES DATA BY ID FROM (1)
 function getID(data_1) {
-  mContainer.innerHTML = '';
-  loadCon.style.display = 'none';
+  mContainer.innerHTML = "";
+  loadCon.style.display = "none";
   //LOOPS THE ID's FROM (1) ALONG WITH FULL INFORMATIONS
-  data_1.forEach((data_2) => {
+  data_1.forEach(data_2 => {
     const data_id = data_2.id; //GETS EVERY ID
     //console.log(trueID);
     //FIND INFORMATIONS USING ID
     async function fetchByID(url) {
       try {
         //FETCH URL WITH ID
-        const response = await fetch(url + data_id + getIdLast, options);
+        const response = await fetch(
+          url + data_id + getIdLast,
+          options
+        );
         const data = await response.json();
         //console.log(data);
 
-        const genreNames = data.genres?.map(genre => genre.name).join(',') ?? 'No genre available';
-        const newDiv = document.createElement('div');
-        newDiv.className = 'movieCard';
+        const genreNames =
+          data.genres?.map(genre => genre.name).join(",") ??
+          "No genre available";
+        const newDiv = document.createElement("div");
+        newDiv.className = "movieCard";
         newDiv.innerHTML = `<div>
             <div class="posterContainer">
-              <div class="date">${data.first_air_date || data.release_date}</div>
+              <div class="date">${data.first_air_date || data.release_date
+          }</div>
               <div class="overview movieDetails">
                 <p>OVERVIEW</p>
                 <span>${data.overview}</span>
               </div>
-              <img src="${imageBaseUrl}${data.poster_path}" alt="${data.title || data.name} POSTER" class="poster" id="moviePoster">
+              <img src="${imageBaseUrl}${data.poster_path}" alt="${data.title || data.name
+          } POSTER" class="poster" id="moviePoster">
             </div>
               <div class="movieDetailsContainer">
-                <p class="movieDetails movieTitle">${data.title || data.name}</p>
+                <p class="movieDetails movieTitle">${data.title || data.name
+          }</p>
                 <span class="movieDetails ratingsContainer">
                   <p class="ratings">${roundOff(data.vote_average)}</p>
                 </span>
@@ -111,7 +121,7 @@ function getID(data_1) {
           } else if (rating < 7.5) {
             theRate.style.color = "orange";
           }
-        };
+        }
 
         const duration = newDiv.querySelector(".duration");
         if (duration) {
@@ -123,32 +133,32 @@ function getID(data_1) {
           } else if (season && episode) {
             duration.textContent = `S${season} E${episode}`;
           }
-        };
+        }
         // To display new div ceated
         mContainer.appendChild(newDiv);
       } catch (error) {
         console.log(error);
       }
-    };
+    }
     //fetch by id tv or movie?
     if (tvPage) {
       fetchByID(seriesByID);
     } else if (mvPage) {
       fetchByID(movieByID);
-    };
-  })//for each end
-};//function end
+    }
+  }); //for each end
+} //function end
 
 function roundOff(num) {
   return Math.round(num * 10) / 10;
-};
+}
 
 //IF USER SEARCH THIS EVENT LISTERNER TRIGGER
-searchForm.addEventListener('submit', async (searchEvent) => {
+searchForm.addEventListener("submit", async searchEvent => {
   searchEvent.preventDefault();
   const inputValue = userInput.value;
-  mContainer.innerHTML = ' ';
-  loadCon.style.display = 'flex';
+  mContainer.innerHTML = " ";
+  loadCon.style.display = "flex";
 
   try {
     if (!inputValue) {
@@ -166,5 +176,5 @@ searchForm.addEventListener('submit', async (searchEvent) => {
 });
 
 function clickLogin() {
-  alert("Design Only :-)")
-};
+  alert("Design Only :-)");
+}
