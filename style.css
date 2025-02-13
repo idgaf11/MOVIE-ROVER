@@ -335,6 +335,15 @@ h1.welcomeText{
   font-size: 1.2em;
   /*border: 1px solid green;*/
 }
+.movieTitle::-webkit-scrollbar{
+  width: 2px;
+}
+.movieTitle::-webkit-scrollbar-track{
+  background: #9c9c9c;
+}
+.movieTitle::-webkit-scrollbar-thumb{
+  background: #707070;
+}
 .ratingsContainer{
   display: flex;
   align-items: center;
