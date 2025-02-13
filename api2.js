@@ -18,14 +18,14 @@ const loadCon2 = document.querySelector(".loadCon2");
 const movieByID = 'https://api.themoviedb.org/3/movie/';
 const seriesByID = 'https://api.themoviedb.org/3/tv/';
 const getIdLast = '?language=en-US'
-//all trend //will display first
+//all trend //will display upon load
 const mvTrend = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
 const tvTrend = 'https://api.themoviedb.org/3/trending/tv/day?language=en-US';
 //to get movie/series id's purpose  only
 const searchMovie = 'https://api.themoviedb.org/3/search/movie?query=';
 const searchTV = 'https://api.themoviedb.org/3/search/tv?query=';
 const plusUrl = '&include_adult=false&language=en-US&page=1';
-//↑↑↑
+//image base url form tmdb
 const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 //API KEY 
 const options = {
