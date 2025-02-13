@@ -110,7 +110,7 @@ function getID(data_1){
            const rating = data.vote_average;
            if(rating < 4 || rating === "null"){
              theRate.style.color = "red";
-           }else if (rating < 8){
+           }else if (rating < 7.5){
              theRate.style.color = "orange";
            }
          };
