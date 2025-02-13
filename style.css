@@ -256,7 +256,7 @@ h1.welcomeText{
   grid-gap: 10px;
   padding-bottom: 9px;
   max-width: 100%;
-  border: 1px solid violet;
+  /*border: 1px solid violet;*/
 }
 .errorMess{
   display: flex;
@@ -330,7 +330,7 @@ h1.welcomeText{
   padding: 0 5px;
   height: 70%;
   width: 80%;
-  overflow: auto;
+  overflow-y: auto;
   font-weight: Bold;
   font-size: 1.2em;
   /*border: 1px solid green;*/
