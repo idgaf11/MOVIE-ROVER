@@ -12,8 +12,7 @@ body{
   backdrop-filter: blur(20px);
   opacity: 0.8;
 }
-
-/*navbar*/
+/*navbar{*/
 nav{
   display: flex;
   flex-wrap: nowrap;
@@ -87,8 +86,7 @@ navbar{
   background: grey;
   color: white;
 }
-/*navbar end*/
-
+/*navbar end}*/
 /*main*/
 main{
   display: flex;
