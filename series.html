@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,42 +9,45 @@
   <title>MOVIEROVER</title>
   <link rel="icon" type="image/x-icon" href="img/logo.png">
 </head>
+
 <body>
-    <nav>
-      <div class="logoNameContainer">
-        <h1 class="logoName">MOVIEROVER</h1>
+  <nav>
+    <div class="logoNameContainer">
+      <h1 class="logoName">MOVIEROVER</h1>
+    </div>
+    <navbar>
+      <a href="index.html" class="navOption">Home</a>
+      <a href="" class="navOption current" id="seriesPage">TV Series</a>
+      <a href="Movies.html" class="navOption">Movies</a>
+      <a href="About.html" class="navOption">About</a>
+      <button class="" type="button" id="loginBtn" onclick='clickLogin()'>Login</button>
+    </navbar>
+  </nav>
+  <main>
+    <div class="container1">
+      <h1 class="topHeading">Trending TV Shows</h1>
+      <form action="" method="get" accept-charset="utf-8" class="searchBarContainer" id="searchForm">
+        <input type="search" name="search" class="searchBar" id="userInput" value=""
+                                                                                                                                placeholder="Search by Series Title" />
+        <button type="submit" class="searchBtn" id="submitMovieSearch"></button>
+      </form>
+    </div>
+    <div id="displayError">
+      <div class="errorMess">
+        <h3>ERROR! "MOVIE/TVSERIES NOT FOUND"</h3>
+        <ul>
+          <p>**if this error shows, maybe:</p>
+          <li>Title is incorrect (misspelled, spacing)</li>
+          <li>Internet Connection</li>
+          <li>Request limit/traffic from TMDB API </li>
+          <li>Unreleased or No data from TMDB </li>
+        </ul>
       </div>
-      <navbar>
-        <a href="index.html" class="navOption">Home</a>
-        <a href="" class="navOption current" id="seriesPage">TV Series</a>
-        <a href="Movies.html" class="navOption">Movies</a>
-        <a href="About.html" class="navOption">About</a>
-        <button class="" type="button" id="loginBtn" onclick='clickLogin()'>Login</button>
-      </navbar>
-    </nav>
-    <main>
-      <div class="container1">
-         <h1 class="topHeading">Trending TV Shows</h1>
-         <form action="" method="get" accept-charset="utf-8" class="searchBarContainer" id="searchForm">
-           <input type="search" name="search" class="searchBar" id="userInput" value="" placeholder="Search by Series Title"/>
-           <button type="submit" class="searchBtn" id="submitMovieSearch"></button>
-         </form>
-      </div>
-      <div id="displayError">
-        <div class="errorMess">
-          <h3>ERROR! "MOVIE/TVSERIES NOT FOUND"</h3>
-          <ul><p>**if this error shows, maybe:</p>
-            <li>Title is incorrect (misspelled, spacing)</li>
-            <li>Internet Connection</li>
-            <li>Request limit/traffic from TMDB API </li>
-            <li>Unreleased or No data from TMDB </li>
-          </ul>
-        </div>
-      </div>
-      <div class="loadCon">
-        <div class="loader"></div>
-      </div>
-      <div class="container2" id="seriesDisplay">
+    </div>
+    <div class="loadCon">
+      <div class="loader"></div>
+    </div>
+    <div class="container2" id="seriesDisplay">
       <!--<div class="loadCon loadCon2">
         <div class="loader"></div>
       </div>-->
@@ -69,11 +73,12 @@
            </div>
         </div>
         -->
-      </div>
-      </main>
-    <footer>
-      <h1></h1>
-    </footer>
+    </div>
+  </main>
+  <footer>
+    <h1></h1>
+  </footer>
 </body>
 <script src="api2.js"></script>
+
 </html>
