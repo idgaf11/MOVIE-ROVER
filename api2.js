@@ -1,6 +1,3 @@
-function clickLogin(){
-  alert("Design lang to HAHAHAHAHA")
-};
 //DOM REF.
 const mContainer = document.querySelector(".container2");
 const topLabel = document.querySelector(".topHeading");
@@ -167,5 +164,8 @@ searchForm.addEventListener('submit', async (searchEvent)=>{
   }catch(error){
     console.log(error);
   }
-  
 });
+
+function clickLogin(){
+  alert("Design Only :-)")
+};
