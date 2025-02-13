@@ -217,6 +217,10 @@ h1.welcomeText{
 }
 .loadCon2{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid white;
 }
 /** loader from web **/
 .loader {
@@ -254,16 +258,9 @@ h1.welcomeText{
 
 /*MOVIE INFORMATION*/
 .container2{
-  /*
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  */
   display: grid;
   grid-template-columns: repeat(auto-fill, 189px);
-  grid-gap: 18px;
-  /*padding: 0 10px;*/
+  grid-gap: 10px;
   padding-bottom: 9px;
   max-width: 100%;
   border: 1px solid violet;
@@ -284,7 +281,7 @@ h1.welcomeText{
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px 9px; 
+  margin-top: 10px; 
   width: 189px; /* ADJUST-THIS IS WIDTH*/
   height: 347px;
   border-radius: 10px;
