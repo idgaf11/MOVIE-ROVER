@@ -124,8 +124,8 @@ function getID(data_1){
              duration.textContent = `S${season} E${episode}`;
            }
          };
-         //DIV CONFIGURATIONS↑↑↑
-         mContainer.appendChild(newDiv); // To display new div ceated
+         // To display new div ceated
+         mContainer.appendChild(newDiv);
          
         } catch (error) {
           console.log(error);
