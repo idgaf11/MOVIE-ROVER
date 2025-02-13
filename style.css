@@ -1,19 +1,22 @@
-*{
+* {
   margin: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 @font-face {
   font-family: "hero-assemble";
   src: url("font/hero14.ttf");
 }
-body{
+
+body {
   background: linear-gradient(to right, #000000, #414141);
   backdrop-filter: blur(20px);
   opacity: 0.8;
 }
+
 /*navbar{*/
-nav{
+nav {
   display: flex;
   flex-wrap: nowrap;
   position: sticky;
@@ -24,16 +27,18 @@ nav{
   height: 5em;
   border-bottom: 2px solid transparent;
   background:
-        linear-gradient(to right, #000000, #353935) padding-box,
-        linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
+    linear-gradient(to right, #000000, #353935) padding-box,
+    linear-gradient(to right, #fa709a 0%, #fee140 100%) border-box;
   
 }
-.logoNameContainer{
+
+.logoNameContainer {
   display: flex;
   width: 45%;
   /*border: 1px solid green;*/
 }
-.logoName{
+
+.logoName {
   display: flex;
   align-items: center;
   height: 100%;
@@ -45,7 +50,8 @@ nav{
   font-family: 'hero-assemble';
   /*border: 1px solid red;*/
 }
-navbar{
+
+navbar {
   display: flex;
   flex-wrap: nowrap;
   justify-content: right;
@@ -53,7 +59,8 @@ navbar{
   width: 55%;
   /*border: 1px solid red;*/
 }
-.navOption{
+
+.navOption {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,14 +71,17 @@ navbar{
   color: white;
   /*border: 1px solid green;*/
 }
-.navOption.current{
+
+.navOption.current {
   color: #FFBF00;
   font-weight: 900;
 }
-.navOption:hover{
+
+.navOption:hover {
   background-color: #CCCCCC;
 }
-#loginBtn{
+
+#loginBtn {
   margin: 19px;
   color: black;
   font-weight: bold;
@@ -81,14 +91,16 @@ navbar{
   border-radius: 0.4em;
   transition-duration: 0.5s;
 }
-#loginBtn:hover{
+
+#loginBtn:hover {
   cursor: pointer;
   background: grey;
   color: white;
 }
+
 /*navbar end}*/
 /*main*/
-main{
+main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -102,21 +114,25 @@ main{
   box-shadow: -10px 0 30px #414141, 10px 0 30px black;
   background: linear-gradient(to right, #000000, #414141);
 }
+
 /*HOME PAGE*/
-h1{
+h1 {
   color: white;
 }
-h1.welcomeText{
+
+h1.welcomeText {
   width: 100%;
 }
-.startBtnCon{
+
+.startBtnCon {
   display: flex;
   justify-content: left;
   align-items: center;
   width: 100%;
   height: 80px;
 }
-.getStartBtn{
+
+.getStartBtn {
   padding: 1.5em;
   height: 50px;
   width: 14em;
@@ -127,30 +143,36 @@ h1.welcomeText{
   box-shadow: -2px 2px 15px grey;
   transition-duration: 1s;
 }
-.getStartBtn:hover{
+
+.getStartBtn:hover {
   width: 16em;
   color: white;
   background-color: #fa709a;
   box-shadow: 0 0 50px #414141;
 }
-#goToAnimeText{
+
+#goToAnimeText {
   display: none;
 }
-.getStartBtn:hover #getStartText{
+
+.getStartBtn:hover #getStartText {
   display: none;
 }
-.getStartBtn:hover #goToAnimeText{
+
+.getStartBtn:hover #goToAnimeText {
   display: inline;
 }
-/*SEARCH BAR - MOVIE PAGE*/ 
-.container1{
+
+/*SEARCH BAR - MOVIE PAGE*/
+.container1 {
   display: flex;
   flex-wrap: wrap;
   height: 85px;
   width: 100%;
   border-bottom: 1px solid white;
 }
-.topHeading{
+
+.topHeading {
   display: flex;
   align-content: center;
   padding: 20px 0;
@@ -159,7 +181,8 @@ h1.welcomeText{
   display: inline-block;
   /*border: 1px solid red;*/
 }
-.searchBarContainer{
+
+.searchBarContainer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -167,7 +190,8 @@ h1.welcomeText{
   width: 50%;
   /*border: 1px solid yellow;*/
 }
-.searchBar{
+
+.searchBar {
   padding: 0 10px;
   width: 50%;
   height: 45px;
@@ -180,10 +204,12 @@ h1.welcomeText{
   border-radius: 8px;
   background-color: #FFFFFF3D;
 }
-.searchBar:focus{
+
+.searchBar:focus {
   background: black;
 }
-.searchBtn{
+
+.searchBtn {
   margin: 0 5px;
   width: 40px;
   height: 40px;
@@ -196,57 +222,84 @@ h1.welcomeText{
   background-position: center;
   border: 2px solid #fee140;
 }
-.searchBtn:hover{
+
+.searchBtn:hover {
   background-color: yellow;
   font-weight: bold;
   color: grey;
 }
+
 /*SEARCHBAR END*/
 #displayError {
   display: none;
   padding-top: 20px;
   width: 100%;
 }
-.loadCon{
+
+.loadCon {
   display: flex;
   justify-content: center;
   margin-top: 50px;
   width: 100%;
 }
+
 .loader {
   width: 50px;
   aspect-ratio: 1;
   display: flex;
 }
-.loader:before, .loader:after {
+
+.loader:before,
+.loader:after {
   content: "";
   flex: 1;
   margin: 0 0 0 -2px;
-  --c:no-repeat linear-gradient(#fee140 0 0);
-  background: 
-    var(--c) 0    0, 
-    var(--c) 100% 0, 
-    var(--c) 100% 100%, 
-    var(--c) 0    100%, 
-    var(--c) 0    50%;
+  --c: no-repeat linear-gradient(#fee140 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%,
+    var(--c) 0 50%;
   animation: l17 1s infinite alternate;
 }
+
 .loader:before {
   transform: scale(-1);
-  margin:0 -2px 0 0;
+  margin: 0 -2px 0 0;
 }
+
 @keyframes l17 {
+
   0%,
-  5%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px}
-  20%  {background-size: 100% 4px,4px 0   ,0    4px,4px 0   ,0    4px}
-  40%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   ,0    4px}
-  60%  {background-size: 100% 4px,4px 100%,100% 4px,4px 0   ,0    4px}
-  80%  {background-size: 100% 4px,4px 100%,100% 4px,4px 50% ,0    4px}
+  5% {
+    background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px
+  }
+  
+  20% {
+    background-size: 100% 4px, 4px 0, 0 4px, 4px 0, 0 4px
+  }
+  
+  40% {
+    background-size: 100% 4px, 4px 100%, 0 4px, 4px 0, 0 4px
+  }
+  
+  60% {
+    background-size: 100% 4px, 4px 100%, 100% 4px, 4px 0, 0 4px
+  }
+  
+  80% {
+    background-size: 100% 4px, 4px 100%, 100% 4px, 4px 50%, 0 4px
+  }
+  
   95%,
-  100% {background-size: 100% 4px,4px 100%,100% 4px,4px 50% ,100% 4px}
+  100% {
+    background-size: 100% 4px, 4px 100%, 100% 4px, 4px 50%, 100% 4px
+  }
 }
+
 /*MOVIE INFORMATION*/
-.container2{
+.container2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, 189px);
   grid-gap: 10px;
@@ -254,20 +307,23 @@ h1.welcomeText{
   max-width: 100%;
   /*border: 1px solid violet;*/
 }
-.errorMess{
+
+.errorMess {
   display: flex;
   flex-direction: column;
   justify-content: right;
   align-items: center;
   color: white;
 }
-.movieCard{
+
+.movieCard {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10px; 
-  width: 189px; /* ADJUST-THIS IS WIDTH*/
+  margin-top: 10px;
+  width: 189px;
+  /* ADJUST-THIS IS WIDTH*/
   height: 347px;
   border-radius: 10px;
   overflow: hidden;
@@ -276,7 +332,8 @@ h1.welcomeText{
   flex-shrink: 0;
   flex-grow: 0;
 }
-.posterContainer{
+
+.posterContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,12 +343,14 @@ h1.welcomeText{
   background-color: #E2DFD2;
   /*border: 1px solid deeppink;*/
 }
-.poster{
+
+.poster {
   width: 100%;
   height: 100%;
   color: white;
 }
-.date{
+
+.date {
   padding: 0 3px;
   position: absolute;
   right: 5px;
@@ -300,11 +359,12 @@ h1.welcomeText{
   text-align: center;
   font-size: 0.8em;
   color: white;
-  background: rgb(128,128,128, 0.7);
+  background: rgb(128, 128, 128, 0.7);
   border: 1px solid white;
   border-radius: 10px;
 }
-.movieDetailsContainer{
+
+.movieDetailsContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -315,13 +375,15 @@ h1.welcomeText{
   background: #28282B;
   /*border: 1px solid lightcoral;*/
 }
-.movieDetails{
+
+.movieDetails {
   padding: 3px;
   margin: 0;
   font-size: 0.7em;
   color: white;
 }
-.movieTitle{
+
+.movieTitle {
   display: flex;
   padding: 0 5px;
   height: 70%;
@@ -331,25 +393,31 @@ h1.welcomeText{
   font-size: 1.2em;
   /*border: 1px solid green;*/
 }
-.movieTitle::-webkit-scrollbar{
+
+.movieTitle::-webkit-scrollbar {
   width: 2px;
 }
-.movieTitle::-webkit-scrollbar-track{
+
+.movieTitle::-webkit-scrollbar-track {
   background: #9c9c9c;
 }
-.movieTitle::-webkit-scrollbar-thumb{
+
+.movieTitle::-webkit-scrollbar-thumb {
   background: #707070;
 }
-.ratingsContainer{
+
+.ratingsContainer {
   display: flex;
   align-items: center;
   width: 20%;
   height: 70%;
   /*border: 1px solid black;*/
 }
-.ratings{
+
+.ratings {
   display: flex;
-  justify-content: center; /*align text: center*/
+  justify-content: center;
+  /*align text: center*/
   align-items: center;
   margin: auto;
   width: 95%;
@@ -361,7 +429,8 @@ h1.welcomeText{
   background-color: #414141;
   border: 1px solid #E2DFD2;
 }
-.genreContainer{
+
+.genreContainer {
   display: flex;
   flex-wrap: nowrap;
   justify-content: left;
@@ -371,7 +440,8 @@ h1.welcomeText{
   width: 70%;
   /*border: 1px solid red;*/
 }
-.genre{
+
+.genre {
   padding: 0 7px;
   max-width: 100px;
   white-space: nowrap;
@@ -381,7 +451,8 @@ h1.welcomeText{
   border-radius: 10px;
   background-color: grey;
 }
-.duration{
+
+.duration {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,7 +465,8 @@ h1.welcomeText{
   bottom: 0;
   /*border: 1px solid darkcyan;*/
 }
-.overview{ 
+
+.overview {
   position: absolute;
   padding: 10px;
   width: 100%;
@@ -410,58 +482,69 @@ h1.welcomeText{
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-.overview p{
+
+.overview p {
   font-weight: bold;
   font-size: 1.5em;
 }
-.movieCard:hover .overview{
+
+.movieCard:hover .overview {
   transform: translateY(0);
 }
+
 /*MOVIE INFORMATION END*/
 /*main end*/
 
 /*footer */
-footer{
+footer {
   margin: 1em 0 0 0;
   padding: 1em;
   width: 100%;
   height: 125px;
   background-color: #8A8A8A;
 }
-@media(max-width: 700px){
-/*NAV*/
-  nav{
+
+@media(max-width: 700px) {
+
+  /*NAV*/
+  nav {
     padding: 3px;
     flex-wrap: wrap;
     height: 5.6em;
   }
-  .logoNameContainer{
+  
+  .logoNameContainer {
     height: 60%;
     width: 100%;
   }
-  .logoName{
+  
+  .logoName {
     justify-content: center;
     width: 100%;
     font-size: 2em;
   }
-  navbar{
+  
+  navbar {
     justify-content: center;
     padding: 0;
     font-size: 0.8em;
     height: 40%;
     width: 100%;
   }
-  .navOption{
+  
+  .navOption {
     margin: 0;
     padding: 11px 0px;
     height: 100%;
     width: 20%;
   }
-  #loginBtn{
+  
+  #loginBtn {
     margin: 0;
     padding: 10px 5px;
     width: 20%;
   }
+  
   /*NAV END*/
   /*MAIN*/
   main {
@@ -471,51 +554,68 @@ footer{
     padding: 0;
     border-radius: 30px;
   }
-  .welcomeText, .startBtnCon{
+  
+  .welcomeText,
+  .startBtnCon {
     text-align: center;
     justify-content: center;
   }
-  .topHeading{
+  
+  .topHeading {
     padding: 10px;
     width: 100%;
     text-align: center;
   }
+  
   /*SEARCH BAR MOBILE*/
-  .container1{
+  .container1 {
     height: auto;
   }
-  .searchBarContainer{
+  
+  .searchBarContainer {
     width: 100%;
     text-align: center;
   }
-  .searchBar{
+  
+  .searchBar {
     margin: 8px auto;
     width: 70%;
   }
-  .searchBtn{
-    display:none;
+  
+  .searchBtn {
+    display: none;
   }
+  
   /*SEARCH BAR MOBILE END*/
   /* MAIN CONTEN ON MOBILE*/
-  .container2{
+  .container2 {
     grid-template-columns: repeat(auto-fill, 139px);
   }
-  .movieCard{
+  
+  .movieCard {
     width: 139px;
     height: 247px;
   }
-  .posterContainer{
-    width: 139px ;
+  
+  .posterContainer {
+    width: 139px;
     height: 195px;
   }
-  .movieTitle{
+  
+  .movieTitle {
     font-size: 0.9em;
   }
-  .ratings, .genre, .duration, .overview{
+  
+  .ratings,
+  .genre,
+  .duration,
+  .overview {
     font-size: 0.4em;
   }
-  .duration{
+  
+  .duration {
     padding-left: 0;
   }
+  
   /*MAIN CONTENT ON MOBILE END*/
 }
