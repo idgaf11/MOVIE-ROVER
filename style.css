@@ -283,6 +283,7 @@ h1.welcomeText{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
   margin: 10px 9px; 
   width: 189px; /* ADJUST-THIS IS WIDTH*/
   height: 347px;
@@ -290,6 +291,8 @@ h1.welcomeText{
   overflow: hidden;
   box-shadow: 0 0 5px white;
   border: 2px solid #E2DFD2;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .posterContainer{
   display: flex;
