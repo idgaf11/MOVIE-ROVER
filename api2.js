@@ -174,7 +174,7 @@ async function randomQ(randomUrl){
   try{
     const response = await fetch()
     const result = await response.json();
-    console.log(resul)
+    console.log(result);
     
   }catch(error){
     console.log(error);
