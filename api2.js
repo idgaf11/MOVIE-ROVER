@@ -180,3 +180,4 @@ async function randomQ(randomUrl){
     console.log(error);
   }
 }
+randomQ();
