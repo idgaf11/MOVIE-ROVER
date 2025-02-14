@@ -167,3 +167,16 @@ searchForm.addEventListener("submit", async searchEvent => {
 function clickLogin() {
   alert("Design Only :-)");
 }
+
+const randonUrl = 'https://qapi.vercel.app/api/random';
+
+async function randomQ(randomUrl){
+  try{
+    const response = await fetch()
+    const result = await response.json();
+    console.log(resul)
+    
+  }catch(error){
+    console.log(error);
+  }
+}
