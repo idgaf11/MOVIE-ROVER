@@ -170,9 +170,9 @@ function clickLogin() {
 
 const randonUrl = 'https://qapi.vercel.app/api/random';
 
-async function randomQ(randomUrl){
+async function randomQ(){
   try{
-    const response = await fetch()
+    const response = await fetch(randomUrl);
     const result = await response.json();
     console.log(result);
     
