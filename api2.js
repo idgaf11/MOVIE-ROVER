@@ -167,14 +167,19 @@ searchForm.addEventListener("submit", async searchEvent => {
 function clickLogin() {
   alert("Design Only :-)");
 }
+//SECOND API
+const quotes = document.querySelector(".quotes");
+const author = document.querySelector(".author");
 
-const randonUrl = 'https://qapi.vercel.app/api/random';
+const randomUrl = 'https://qapi.vercel.app/api/random';
 
 async function randomQ(){
   try{
     const response = await fetch(randomUrl);
     const result = await response.json();
     console.log(result);
+    quotes.textContent = `"${result.quote}"`;
+    author.textContent = `-${result.autho}r`;
     
   }catch(error){
     console.log(error);
